@@ -1,0 +1,2 @@
+The System.Security.Principal namespace defines a principal
+object that represents the security context under which code is running. 
