@@ -1,0 +1,3 @@
+ServiceController represents a Windows Service.
+
+Returned by `get-service`
