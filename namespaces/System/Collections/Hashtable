@@ -1,0 +1,2 @@
+The type of the PowerShell construct
+  @{ 'k' = 'v' ; 'foo' = 'bar' }
