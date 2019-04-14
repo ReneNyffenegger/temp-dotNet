@@ -1,2 +1,4 @@
 The type of the PowerShell construct
   @{ 'k' = 'v' ; 'foo' = 'bar' }
+
+The type of $matches is also Hashtable.
