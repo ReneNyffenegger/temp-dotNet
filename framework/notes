@@ -1,0 +1,6 @@
+The .NET Framework consists of two main components, which are versioned separately:
+  - A set of assemblies, which are collections of types and resources that
+    provide the functionality for your apps. The .NET Framework and assemblies
+    share the same version number.
+  - The common language runtime (CLR), which manages and executes your app's 
+    code. The CLR is identified by its own version number 
