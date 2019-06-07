@@ -1,0 +1,2 @@
+$four = 4
+write-host $four.getType()
