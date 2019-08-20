@@ -1,0 +1,1 @@
+(get-childItem -name .\README.md).getType().FullName
