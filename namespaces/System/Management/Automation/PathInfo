@@ -1,1 +1,3 @@
 Returned by get-location
+
+  Compare with System.IO.Directory ( (get-item .).getType() , (get-item .).getType().namespace
