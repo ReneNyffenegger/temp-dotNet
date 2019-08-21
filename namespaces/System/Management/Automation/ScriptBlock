@@ -1,1 +1,3 @@
-An object representing a pre-compiled block of powershell script.
+An object representing a pre-compiled block of powershell script (aka script block)
+
+PS C:\> {}.GetType().FullName
