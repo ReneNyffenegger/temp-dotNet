@@ -1,0 +1,1 @@
+System.IO.Packaging provides classes that support storage of multiple data objects in a single container. (think Office Open XML, ISO 29500)
