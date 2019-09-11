@@ -1,1 +1,4 @@
 System.Data.Common contains classes shared by the .NET Framework data providers.
+
+The classes in System.Data.Common are intended to give developers a way to write
+ADO.NET code that will work against all .NET Framework data providers.
