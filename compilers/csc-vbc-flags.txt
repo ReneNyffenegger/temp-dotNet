@@ -1,0 +1,8 @@
+
+csc.exe / vbc.exe have the following flags. Unlear is: if this in .NET Framework only.
+  • Set the name of the compiled file (/out);
+  • Collect console applications (/target:exe);
+  • Collect applications with graphical interface without using a console (/target:winexe);
+  • Collect dynamically linked libraries (/target:library);
+  • Add references to external assemblies (/r);
+  • Write command-line arguments for the *.rsp file and specify the name of the rsp file as the command-line argument (@file.rsp).
