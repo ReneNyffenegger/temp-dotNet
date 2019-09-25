@@ -1,0 +1,15 @@
+
+--
+-- objects that reference unmanaged resources implement the IDisposable interface. When you're done using the object, you call the object's Dispose() method, which is responsible for releasing any unmanaged resources
+--
+
+using System.IO;
+
+using (FileStream stream = GetFileStream(context))
+{
+
+     // Once the using block completes, the .NET runtime automatically calls
+     // the stream object's Dispose() method, which releases the file handle.
+
+    // Operations on the stream
+}
