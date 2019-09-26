@@ -1,0 +1,14 @@
+The System.CodeDom namespace contains classes that can be used to represent the elements and structure of a source code document.
+
+https://stackoverflow.com/a/58084361/180275
+   Originally in the .NET framework, csc.exe was a self-contained binary
+   responsible for compiling C# source code to IL. But it was opaque and its
+   command-line interface limited what could be achieved by invoking it.
+   
+   Microsoft introduced the System.CodeDom namespace and classes as a way for
+   their own tools to generate code (e.g. the Windows Forms designer in Visual
+   Studio), but pretty much everyone started using it because it was miles better
+   than csc.exe. However given what it was created for, CodeDOM suffers from
+   numerous limitations and edge cases that make it less than ideal for certain
+   non-compilation tasks - and at the end of the day it simply invokes csc.exe to
+   produce compiled code.
