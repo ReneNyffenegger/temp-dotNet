@@ -1,22 +1,29 @@
 
 
 table { ll
-  .NET type ☰ c# type
-  System.Boolean ☰ bool
-  System.Byte ☰ byte
-  System.SByte ☰ sbyte
-  System.Char ☰ char
-  System.Decimal ☰ decimal
-  System.Double ☰ double
-  System.Single ☰ float
-  System.Int32 ☰ int
-  System.UInt32 ☰ uint
-  System.Int64 ☰ long
-  System.UInt64 ☰ ulong
-  System.Object ☰ object
-  System.Int16 ☰ short
-  System.UInt16 ☰ ushort
-  System.String ☰ string
+  .NET type              ☰ CLS   ☰ CIL name             ☰ c# type ☰ Comment
+  System.Boolean         ☰ ✓     ☰ bool                 ☰ bool    ☰
+  System.Byte            ☰ ✓     ☰ ?                    ☰ byte    ☰ Unsigned 8-bit integer
+  System.SByte           ☰ ✗ (?) ☰ int8                 ☰ sbyte   ☰ Signed 8-bit integer
+  System.Char            ☰ ✓     ☰ char                 ☰ char    ☰ Unicode 16-bit character.
+  System.Decimal         ☰ ?     ☰ ?                    ☰ decimal ☰
+  System.Double          ☰ ✓     ☰ float64              ☰ double  ☰ IEC 60559:1989 64-bit float
+  System.Single          ☰ ✓     ☰ float32              ☰ float   ☰ IEC 60559:1989 32-bit float
+  System.Int32           ☰ ✗     ☰ int32                ☰ int     ☰ 
+  System.UInt32          ☰ ✓     ☰ unsigned int32       ☰ uint    ☰
+  System.Int64           ☰ ✓     ☰ int64                ☰ long    ☰
+  System.UInt64          ☰ ✗     ☰ unsigned int64       ☰ ulong   ☰
+  System.Object          ☰ ✓     ☰ object               ☰ object  ☰ An *object* or a *boxed value type*.
+  System.Int16           ☰ ✓     ☰ int16                ☰ short   ☰
+  System.UInt16          ☰ ✗     ☰ unsigned int16       ☰ ushort  ☰
+  System.String          ☰ ✓     ☰ string               ☰ string  ☰ Unicode string
+  System.IntPtr          ☰ ✓     ☰ native int           ☰ ?       ☰ Native size signed integer
+  System.UIntPtr         ☰ ✗     ☰ native unsigned int  ☰ ?       ☰ Native size unsigned integer
+  System.TypedReference  ☰ ✗     ☰ typedref             ☰ ?       ☰ Pointer plus exact type
 table }
+
+CLS = CLS Type?
+-
+CIL name = Name in CIL assembler
 
 c#: All of the types in the table, except object and string, are referred to as simple types.

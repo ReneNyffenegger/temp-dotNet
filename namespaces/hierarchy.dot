@@ -3,11 +3,13 @@ digraph hierarchy {
    
     System_Object;
 
-    System_ValueType;
+    System_ValueType [ label = "ValueType" ];
 
-    System_Enum;
+    System_Enum [ label = "Enum" ];
 
-    System_Int32;
+    System_Int32 [ label = "Int32" ];
+
+    System_Void [ label = "Void" ];
 
     System_Nullable [ label = "Nullable<T>" ];
 
@@ -19,11 +21,21 @@ digraph hierarchy {
 
     System_Object -> System_Nullable;
 
+    System_Attribute [ label = "Attribute" ];
+
+    System_CLSCompliantAttribute [ label = "CLSCompliantAttribute" ];
+
     System_ValueType -> System_Enum;
 
     System_ValueType -> System_Int32;
 
+    System_ValueType -> System_Void;
+
     System_Object -> System_Reflection_Memberinfo;
+
+    System_Object -> System_Attribute;
+
+    System_Attribute -> System_CLSCompliantAttribute;
 
     System_Reflection_Memberinfo -> System_Type;
 

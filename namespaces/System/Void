@@ -1,0 +1,4 @@
+
+`System.Void` is mainly used in the `System.Reflection` namespace.
+
+`System.void` is not boxable.
