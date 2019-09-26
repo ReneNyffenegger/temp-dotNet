@@ -1,0 +1,9 @@
+System.Enum is the base class for enumerations.
+
+An enumeration is a set of named constants whose underlying type is any integral type, by default `System.Int32`.
+
+C#(?): `T?` is shorthand for `Nullable<T>`:
+code {
+int? nullableInt = 42;
+nullableInt = 42;
+code }

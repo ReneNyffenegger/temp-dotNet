@@ -1,0 +1,31 @@
+digraph hierarchy {
+
+   
+    System_Object;
+
+    System_ValueType;
+
+    System_Enum;
+
+    System_Int32;
+
+    System_Nullable [ label = "Nullable<T>" ];
+
+    System_Reflection_Memberinfo [ label = "Reflection.MemberInfo" ];
+
+    System_Type [ label = "Type" ];
+
+    System_Object -> System_ValueType;
+
+    System_Object -> System_Nullable;
+
+    System_ValueType -> System_Enum;
+
+    System_ValueType -> System_Int32;
+
+    System_Object -> System_Reflection_Memberinfo;
+
+    System_Reflection_Memberinfo -> System_Type;
+
+
+}

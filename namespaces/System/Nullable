@@ -1,0 +1,4 @@
+
+Nullable types are instances of the System.Nullable<T> struct.
+
+Nullable types can represent all the values of an underlying type T, and an additional null value. 
