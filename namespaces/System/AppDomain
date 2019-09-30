@@ -1,0 +1,3 @@
+AppDomain represents an application domain, which is an isolated environment where applications execute. 
+
+PS:> [System.AppDomain]::CurrentDomain.GetAssemblies()
