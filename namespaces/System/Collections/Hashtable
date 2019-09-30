@@ -2,3 +2,15 @@ The type of the PowerShell construct
   @{ 'k' = 'v' ; 'foo' = 'bar' }
 
 The type of $matches is also Hashtable.
+
+
+$hash = @{foo='bar'; hello='world'}
+$hash.getType()
+
+    IsPublic IsSerial Name                                     BaseType
+    -------- -------- ----                                     --------
+    True     True     Hashtable                                System.Object
+
+$hash.getType().fullName
+
+    System.Collections.Hashtable

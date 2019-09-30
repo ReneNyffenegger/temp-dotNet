@@ -1,0 +1,21 @@
+PowerShell:
+ 
+  $arr = 1, 2, 3
+  $arr.getType()
+
+    IsPublic IsSerial Name                                     BaseType
+    -------- -------- ----                                     --------
+    True     True     Object[]                                 System.Array
+
+  $arr.getType().fullName
+
+    System.Object[]
+
+
+---------------------
+
+Compare with
+
+   System.Collections           (namespace)
+   System.Collections.ArrayList (Class)
+
