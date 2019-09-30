@@ -3,12 +3,15 @@ digraph hierarchy {
    node [ shape=box ]
 
    System [ label = "." ];
-   CodeDom     [ label=< <table border="0"><tr><td align="text"><font face="Courier">CodeDom</font></td></tr><tr><td>Represent the elements and<br align="left"/>structure of a source code<br align="left"/></td></tr></table> > ];
-   Data        [ label=< <table border="0"><tr><td align="text"><font face="Courier">Data</font></td></tr><tr><td>ADO.NET</td></tr></table> > ];
-   Collections [ label=< <table border="0"><tr><td align="text"><font face="Courier">Collections</font></td></tr><tr><td>…</td></tr></table> > ];
+   CodeDom        [ label=< <table border="0"><tr><td align="text"><font face="Courier">CodeDom</font></td></tr><tr><td>Represent the elements and<br align="left"/>structure of a source code<br align="left"/></td></tr></table> > ];
+   Data           [ label=< <table border="0"><tr><td align="text"><font face="Courier">Data</font></td></tr><tr><td>ADO.NET</td></tr></table> > ];
+   Collections    [ label=< <table border="0"><tr><td align="text"><font face="Courier">Collections</font></td></tr><tr><td>…</td></tr></table> > ];
+   Data_SqlClient [ label=< <table border="0"><tr><td align="text"><font face="Courier">Data.SqlClient</font></td></tr><tr><td align="text">.NET data provider for<br align="left"/>SQL Server<br align="left"/></td></tr></table> > ];
 
    System -> CodeDom;
    System -> Data;
    System -> Collections;
+
+   Data -> Data_SqlClient;
 
 }
