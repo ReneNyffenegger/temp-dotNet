@@ -1,0 +1,6 @@
+A platform-specific type that is used to represent a pointer or a handle.
+
+
+-- Determine bitness of platform in Powershell
+
+PS C:\> [IntPtr]::Size
