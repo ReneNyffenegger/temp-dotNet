@@ -1,0 +1,10 @@
+System.Data namespace:
+  https://docs.microsoft.com/en-us/dotnet/api/system.data?view=netstandard-2.1
+
+ECMA 335
+   https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf
+
+Assembly targets etc.
+
+  https://stackoverflow.com/questions/58082820/how-do-i-tell-the-roslyn-c-sharp-compiler-to-use-a-specific-version-of-net
+  https://stackoverflow.com/questions/2310701/determine-framework-clr-version-of-assembly

@@ -1,9 +1,12 @@
 digraph hierarchy {
 
+   x [ shape=circle ]
 
    System [ label = "" ];
-   System_CodeDom [ label=< <table><tr><td>CodeDom</td></tr><tr><td> represent the elements and structure of a source code</td></tr></table> > ];
+   CodeDom [ label=< <table><tr><td><b>CodeDom</b></td></tr><tr><td> represent the elements<br/>and structure of a source code</td></tr></table> > ];
+   Data [ label=< <table><tr><td><b>Data</b></td></tr><tr><td>ADO.NET</td></tr></table> > ];
 
-   System -> System_CodeDom;
+   System -> CodeDom;
+   System -> Data;
 
 }
