@@ -1,0 +1,7 @@
+
+PowerShell:
+  (get-item HKCU:\Environment).getType().fullName
+
+   
+   $regKey = get-item HKCU:\Environment
+   $regKey.getValue('PATH')
