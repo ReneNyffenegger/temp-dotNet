@@ -1,9 +1,9 @@
-
-
-
 Boxing: The conversion of a value having some value type, to a newly allocated instance of the
 reference type `System.Object`.
 
 Unboxing: The conversion of a value having type `System.Object`, whose run-time type is a
 value type, to a value type instance.
 
+-------------------------
+
+Object.GetType returns a System.Type

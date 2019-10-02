@@ -7,3 +7,5 @@ In reflection, all classes beginning with the word Runtime are created only once
 Powershell: (get-item .).getType().getType().BaseType.BaseType.FullName
 
 The C# typeof operator, the C++ typeid operator, and the Visual Basic GetType operator obtain the Type object for a type.
+
+System.Object.GetType() returns a System.Type

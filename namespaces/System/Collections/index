@@ -1,0 +1,3 @@
+Noteably absent from the System.Collections namespace is System.Array
+-
+msdn: Unlike the classes in the System.Collections namespaces, System.Array has a fixed capacity.
