@@ -1,0 +1,6 @@
+$c = get-psDrive -psProvider fileSystem -name C
+$c.getType().fullName
+
+# System.Management.Automation.PSDriveInfo
+
+

@@ -1,0 +1,8 @@
+When using the namespace System.Management.Automation in a c# project,
+apparently, the assembly System.Management.Automation.dll needs to be
+explicitely specified to csc.exe (/reference:…, see interpreter.cs in the
+temp-dotnet github project)
+-
+The location of the System.Management.Automation assembly can be found in a PowerShell console with:
+  [psobject].assembly.location
+
