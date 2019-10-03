@@ -7,10 +7,18 @@ digraph hierarchy {
    Data           [ label=< <table border="0"><tr><td align="text"><font face="Courier">Data</font></td></tr><tr><td>ADO.NET</td></tr></table> > ];
    Collections    [ label=< <table border="0"><tr><td align="text"><font face="Courier">Collections</font></td></tr><tr><td>…</td></tr></table> > ];
    Data_SqlClient [ label=< <table border="0"><tr><td align="text"><font face="Courier">Data.SqlClient</font></td></tr><tr><td align="text">.NET data provider for<br align="left"/>SQL Server<br align="left"/></td></tr></table> > ];
+   Security       [ label=< <table border="0"><tr><td align="text"><font face="Courier">Security</font></td></tr><tr><td align="text">…<br align="left"/></td></tr></table> > ];
+   Security_Principal  [ label=< <table border="0"><tr><td align="text"><font face="Courier">Security.Principal</font></td></tr><tr><td align="text">Security context under<br align="left"/>which code is running<br align="left"/></td></tr></table> > ];
+   Security_Cryptography  [ label=< <table border="0"><tr><td align="text"><font face="Courier">Security.Cryptography</font></td></tr><tr><td align="text">Cryptographic services<br align="left"/></td></tr></table> > ];
+   Security_Cryptography_X509Certificates  [ label=< <table border="0"><tr><td align="text"><font face="Courier">Security.Cryptography.X509Certificates</font></td></tr><tr><td align="text">X.509<br align="left"/></td></tr></table> > ];
 
    System -> CodeDom;
    System -> Data;
    System -> Collections;
+   System -> Security;
+   Security -> Security_Principal;
+   Security -> Security_Cryptography;
+   Security_Cryptography->Security_Cryptography_X509Certificates;
 
    Data -> Data_SqlClient;
 
