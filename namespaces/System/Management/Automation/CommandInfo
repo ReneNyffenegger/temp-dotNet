@@ -1,0 +1,11 @@
+The base class for the information about commands.
+Contains the basic information about the command, like name and type.
+
+Classes that derive from CommandInfo are:
+   System.Management.Automation.AliasInfo
+   System.Management.Automation.ApplicationInfo
+   System.Management.Automation.CmdletInfo
+   System.Management.Automation.ExternalScriptInfo
+   System.Management.Automation.FunctionInfo
+   System.Management.Automation.RemoteCommandInfo
+   System.Management.Automation.ScriptInfo
