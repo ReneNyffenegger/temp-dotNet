@@ -1,0 +1,3 @@
+Encapsulates zero or more components (`System.ComponentModel.Components`).
+
+Containment refers to logical containment, not visual containment. 

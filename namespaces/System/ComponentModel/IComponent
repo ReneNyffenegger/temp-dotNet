@@ -1,0 +1,3 @@
+Provides functionality required by all components.
+
+System.Component is the default implementation of IComponent and serves as the base class for all components in the common language runtime.

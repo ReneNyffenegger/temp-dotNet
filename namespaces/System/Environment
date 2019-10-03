@@ -1,0 +1,30 @@
+Provides information about, and means to manipulate, the current environment and platform. This class cannot be inherited.
+
+PowerShell
+----------
+
+   [System.Environment].GetProperties() | select-object name
+
+
+[System.Environment]::OSVersion
+[System.Environment]::TickCount
+[System.Environment]::ExitCode
+[System.Environment]::CommandLine
+[System.Environment]::CurrentDirectory
+[System.Environment]::SystemDirectory
+[System.Environment]::MachineName
+[System.Environment]::ProcessorCount
+[System.Environment]::SystemPageSize
+[System.Environment]::NewLine
+[System.Environment]::Version
+[System.Environment]::WorkingSet
+[System.Environment]::StackTrace
+[System.Environment]::Is64BitProcess
+[System.Environment]::Is64BitOperatingSystem
+[System.Environment]::HasShutdownStarted
+[System.Environment]::UserName
+[System.Environment]::UserInteractive
+[System.Environment]::UserDomainName
+[System.Environment]::CurrentManagedThreadId
+
+    [System.Environment].GetMethods() | select-object name

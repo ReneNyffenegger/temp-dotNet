@@ -1,0 +1,5 @@
+Provides the base implementation for the IComponent interface and enables object sharing between applications.
+
+System.Windows.Forms.Control inherits from Component
+
+A component interacts with its container primarily through a container-provided System.ComponentModel.ISite, which is a repository of container-specific per-component information.

@@ -1,0 +1,3 @@
+The System.Data namespace provides access to classes that represent the ADO.NET architecture.
+
+ ADO.NET lets you build components that efficiently manage data from multiple data sources.

@@ -1,0 +1,21 @@
+PowerShell:
+
+   (42).GetType().GetType().fullName
+
+   [System.Int32].GetType().FullName
+
+
+System.RuntimeType vs System.Type
+--------------------------------
+   https://stackoverflow.com/a/5737956/180275 :
+
+    System.Type is an abstract base class. The CLR has it's concrete
+    implementation in the internal type System.RuntimeType. Because of this
+    typeof(string).GetType() returns a RuntimeType but typeof(Type) returns a
+    normal Type. Using the .Equals method does in fact an
+    object.ReferenceEquals which returns false. To get the expecting results,
+    you may use type.IsInstanceOfType(element). This will also return true if
+    element is of a derived type. If you'd want to check for the exact type,
+    the return-value of false of your method is desired result. You may also
+    use checkType(arrayType, Type.GetType("System.RuntimeType")) to check for
+    the RuntimeType.

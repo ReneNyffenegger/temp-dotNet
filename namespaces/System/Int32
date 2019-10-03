@@ -1,2 +1,6 @@
 $four = 4
 write-host $four.getType()
+
+--
+
+System.Int32 is a struct rather than a class

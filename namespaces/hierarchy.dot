@@ -1,9 +1,12 @@
 digraph hierarchy {
 
+    node [ shape=box ]
    
     System_Object;
 
-    System_ValueType [ label = "ValueType" ];
+
+    System_ValueType [ label=< <table border="0"><tr><td align="text"><font face="Courier">ValueType</font></td></tr><tr><td>…</td></tr></table> > ];
+    System_DateTime [ label=< <table border="0"><tr><td align="text"><font face="Courier">DateTime</font></td></tr><tr><td>…</td></tr></table> > ];
 
     System_Enum [ label = "Enum" ];
 
@@ -14,30 +17,47 @@ digraph hierarchy {
     System_Nullable [ label = "Nullable<T>" ];
 
     System_Reflection_Memberinfo [ label = "Reflection.MemberInfo" ];
+    System_Reflection_TypeInfo [ label=< <table border="0"><tr><td align="text"><font face="Courier">System.Reflection.TypeInfo</font></td></tr><tr><td>…</td></tr></table> > ];
 
-    System_Type [ label = "Type" ];
+    System_Type [ label=< <table border="0"><tr><td align="text"><font face="Courier">Type</font></td></tr><tr><td>…</td></tr></table> > ];
+    System_Type -> System_Reflection_TypeInfo;
 
     System_Object -> System_ValueType;
 
     System_Object -> System_Nullable;
 
-    System_Attribute [ label = "Attribute" ];
+    System_Attribute [ label=< <table border="0"><tr><td align="text"><font face="Courier">System.Attribute</font></td></tr><tr><td>…</td></tr></table> > ];
+    System_DefaultPropertyAttribute [ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.DefaultPropertyAttribute</font></td></tr><tr><td>…</td></tr></table> > ];
+    System_Environment [ label=< <table border="0"><tr><td align="text"><font face="Courier">Environment</font></td></tr><tr><td>Current environment/platform</td></tr></table> > ];
+
+    System_ComponentModel_MarshalByValueComponent[ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.MarshalByValueComponent</font></td></tr><tr><td align="text">- Implements IComponent<br align="left"/>- Provides the base implementation<br align="left"/>for remotable components<br align="left"/>that are marshaled by value <br align="left"/>(a copy of the serialized object is passed).<br align="left"/></td></tr></table> > ];
+    System_Data_DataTable[ label=< <table border="0"><tr><td align="text"><font face="Courier">Data.DataTable</font></td></tr><tr><td align="text">In-Memory table<br align="left"/></td></tr></table> > ];
+
+    System_ComponentModel_MarshalByValueComponent-> System_Data_DataTable;
 
     System_CLSCompliantAttribute [ label = "CLSCompliantAttribute" ];
 
     System_ValueType -> System_Enum;
+    System_ValueType -> System_DateTime;
 
     System_ValueType -> System_Int32;
 
     System_ValueType -> System_Void;
 
     System_Object -> System_Reflection_Memberinfo;
+    System_Object -> System_Environment;
 
     System_Object -> System_Attribute;
 
     System_Attribute -> System_CLSCompliantAttribute;
+    System_Attribute -> System_DefaultPropertyAttribute;
 
     System_Reflection_Memberinfo -> System_Type;
+
+    System_RuntimeType [ label=< <table border="0"><tr><td align="text"><font face="Courier">RuntimeType</font></td></tr><tr><td>Not documented?</td></tr></table> > ];
+    System_Reflection_TypeInfo -> System_RuntimeType;
+
+    System_Object -> System_ComponentModel_MarshalByValueComponent;
 
 
 }

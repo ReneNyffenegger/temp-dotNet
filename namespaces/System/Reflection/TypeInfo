@@ -1,0 +1,15 @@
+Represents type declarations for class types, interface types, array types,
+value types, enumeration types, type parameters, generic type definitions, and
+open or closed constructed generic types.
+
+
+A System.Reflection.TypeInfo object represents the type definition itself, whereas a System.Type object represents a reference to the type definition. 
+-
+Getting a TypeInfo object forces the assembly that contains that type to load
+-
+In comparison, you can manipulate Type objects without necessarily requiring the runtime to load the assembly they reference.
+
+System.Reflection.TypeInfo contains many of the members available in the System.Type class, and many of
+the reflection properties in the .NET for Windows 8.x Store apps return
+collections of TypeInfo objects. To get a TypeInfo object from a Type object,
+use the IntrospectionExtensions.GetTypeInfo(Type) extension method.
