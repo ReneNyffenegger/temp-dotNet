@@ -1,1 +1,17 @@
 At least in c#: All value types are derived implicitly from the System.ValueType.
+
+Boxing / Unboxing
+
+  Boxing is the process of converting a value type to the type object or to any
+  interface type that's implemented by the value type. When the common language
+  runtime (CLR) boxes a value type, it wraps the value in a System.Object and
+  stores it on the managed heap. Unboxing extracts the value type from the
+  object. Boxing is implicit; unboxing is explicit.
+  
+  Boxing and unboxing is an important concept in C#. C# Type System contains
+  three data types: Value Types (int, char, etc), Reference Types (object) and
+  Pointer Types. Basically it convert a Value Type to a Reference Type, and
+  vice versa. Boxing and Unboxing enables a unified view of the type system in
+  which a value of any type can be treated as an object
+
+  The Value type is always stored in Stack. The Referenced Type is stored in Heap.
