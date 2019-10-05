@@ -1,1 +1,3 @@
 Wraps an object providing alternate views of the available members and ways to extend them. Members can be methods, properties, parameterized properties, etc.
+
+Compare with System.Management.Automation.PSCustomObject
