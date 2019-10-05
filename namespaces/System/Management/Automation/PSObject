@@ -1,5 +1,14 @@
 Wraps an object providing alternate views of the available members and ways to extend them. Members can be methods, properties, parameterized properties, etc.
 
+
+In fact, many objects in PowerShell are simply empty PSObjects with extended members.
+  For example, the only significant members of objects created via New-Object
+  -TypeName PSObject are extended members. Import-Csv creates custom PSObjects
+  with extended properties created from the rows of the underlying file;
+  Select-Object works similarly with properties of an input object. Some cmdlets,
+  such as SharePoint's Get-SPFarmConfig, return PSObjects representing
+  configuration details solely as extended properties.
+
 -----------------
 
    Compare with System.Management.Automation.PSCustomObject
@@ -15,3 +24,6 @@ Wraps an object providing alternate views of the available members and ways to e
      
       $obj = new-object system.object -property $ht #  ✗ The member "num" was not found for the specified .NET object.
       $obj = new-object psObject      -property $ht #  ✓
+
+
+-------------------------------

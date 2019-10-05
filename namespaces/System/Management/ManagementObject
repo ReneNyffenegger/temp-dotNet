@@ -1,1 +1,3 @@
 The System.Management.ManagementObject class provides a wrapper in .NET for WMI objects.
+
+Whatever the underlying WMI type of these objects, they all appear the same in .NET, with the same direct properties and methods available 
