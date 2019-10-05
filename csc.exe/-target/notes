@@ -1,0 +1,64 @@
+-target:exe
+
+    The -target:exe option is in effect by default. The executable file will be created with the .exe extension.
+
+    -target:exe creates a console application, - -target:winexe creates a Windows program executable.
+
+    Unless otherwise specified with the -out option, the output file name takes the name of the input file that contains the Main method.
+
+-target:winexe
+
+    The executable file will be created with the .exe extension. A Windows
+    program is one that provides a user interface from either the .NET
+    Framework library or with the Windows APIs.
+
+
+-target:appcontainerexe 
+
+    If you use the -target:appcontainerexe compiler option, the compiler
+    creates a Windows executable (.exe) file that must be run in an app
+    container. This option is equivalent to -target:winexe but is designed for
+    Windows 8.x Store apps.
+
+    To require the app to run in an app container, this option sets a bit in
+    the Portable Executable (PE) file. When that bit is set, an error occurs if
+    the CreateProcess method tries to launch the executable file outside an app
+    container.
+    
+    Unless you use the -out option, the output file name takes the name of the
+    input file that contains the Main method.
+    
+    When you specify this option at a command prompt, all files until the next
+    -out or -target option are used to create the executable file.
+
+-target:library 
+
+    causes the compiler to create a dynamic-link library (DLL) rather than an executable file (EXE).
+
+-target:module
+
+     This option causes the compiler to not generate an assembly manifest.
+
+     By default, the output file created by compiling with this option will have an extension of .netmodule.
+
+     A file that does not have an assembly manifest cannot be loaded by the
+     .NET Framework common language runtime. However, such a file can be
+     incorporated into the assembly manifest of an assembly by means of
+     -addmodule.
+
+     Creating a module is not supported in the Visual Studio development environment.
+
+
+-target:winmdobj 
+
+      If you use the -target:winmdobj compiler option, the compiler creates an
+      intermediate .winmdobj file that you can convert to a Windows Runtime
+      binary (.winmd) file. The .winmd file can then be consumed by JavaScript
+      and C++ programs, in addition to managed language programs. 
+
+      The winmdobj setting signals to the compiler that an intermediate module
+      is required. In response, Visual Studio compiles the C# class library as
+      a .winmdobj file. The .winmdobj file can then be fed through the WinMDExp
+      export tool to produce a Windows metadata (.winmd) file. The .winmd file
+      contains both the code from the original library and the WinMD metadata
+      that is used by JavaScript or C++ and by the Windows Runtime.
