@@ -4,10 +4,14 @@ Wraps an object providing alternate views of the available members and ways to e
 
    Compare with System.Management.Automation.PSCustomObject
 
+      https://social.technet.microsoft.com/Forums/scriptcenter/en-US/dcfa43ba-812f-4274-b5b2-caa0e2d56988/psobject-vs-systemobject?forum=ITCG
+
       $ht = @{ num = 42; txt = 'hello world' }
 
       ([PSObject]                          $ht ).GetType().FullName    # System.Collections.Hashtable
       ([PSCustomObject]                    $ht ).GetType().FullName    # System.Management.Automation.PSCustomObject
       (new-object -type psObject -property $ht ).GetType().FullName    # System.Management.Automation.PSCustomObject
       (new-object       psObject -property $ht ).GetType().FullName    # System.Management.Automation.PSCustomObject
-
+     
+      $obj = new-object system.object -property $ht #  ✗ The member "num" was not found for the specified .NET object.
+      $obj = new-object psObject      -property $ht #  ✓
