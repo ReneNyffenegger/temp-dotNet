@@ -1,0 +1,3 @@
+Implements IComponent and provides the base implementation for remotable components that are marshaled by value (a copy of the serialized object is passed).
+
+Compare with System.MarshalByRefObject

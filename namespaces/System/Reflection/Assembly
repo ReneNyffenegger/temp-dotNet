@@ -1,0 +1,3 @@
+An assembly is a reusable, versionable, and self-describing building block of a common language runtime application.
+
+Use the Assembly class to load assemblies, to explore the metadata and constituent parts of assemblies, to discover the types contained in assemblies, and to create instances of those types.

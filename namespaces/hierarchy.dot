@@ -30,7 +30,6 @@ digraph hierarchy {
     System_DefaultPropertyAttribute [ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.DefaultPropertyAttribute</font></td></tr><tr><td>…</td></tr></table> > ];
     System_Environment [ label=< <table border="0"><tr><td align="text"><font face="Courier">Environment</font></td></tr><tr><td>Current environment/platform</td></tr></table> > ];
 
-    System_ComponentModel_MarshalByValueComponent[ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.MarshalByValueComponent</font></td></tr><tr><td align="text">- Implements IComponent<br align="left"/>- Provides the base implementation<br align="left"/>for remotable components<br align="left"/>that are marshaled by value <br align="left"/>(a copy of the serialized object is passed).<br align="left"/></td></tr></table> > ];
     System_Data_DataTable[ label=< <table border="0"><tr><td align="text"><font face="Courier">Data.DataTable</font></td></tr><tr><td align="text">In-Memory table<br align="left"/></td></tr></table> > ];
 
     System_ComponentModel_MarshalByValueComponent-> System_Data_DataTable;
@@ -44,6 +43,16 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier">Management.Automation</font></td></tr>
        <tr><td align="text"><font face="Courier">PSCustomObject</font></td></tr>
        <tr><td>…</td></tr></table> > ];
+
+    System_ComponentModel_MarshalByValueComponent[ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.MarshalByValueComponent</font></td></tr><tr><td align="text">- Implements IComponent<br align="left"/>- Provides the base implementation<br align="left"/>for remotable components<br align="left"/>that are marshaled by value <br align="left"/>(a copy of the serialized object is passed).<br align="left"/></td></tr></table> > ];
+
+     System_MarshalByRefObject [ label=< <table border="0">
+                             <tr><td align="text"><font face="Courier">MarshalByRefObject</font></td></tr>
+                             <tr><td>…</td></tr></table> > ];
+
+     System_AppDomain [ label=< <table border="0">
+                             <tr><td align="text"><font face="Courier">AppDomain</font></td></tr>
+                             <tr><td>Application Domain</td></tr></table> > ];
 
     System_CLSCompliantAttribute [ label = "CLSCompliantAttribute" ];
 
@@ -73,4 +82,6 @@ digraph hierarchy {
     System_Object -> System_Management_Automation_PSCusteomObject;
 
 
+   System_Object -> System_MarshalByRefObject;
+   System_MarshalByRefObject -> System_AppDomain;
 }

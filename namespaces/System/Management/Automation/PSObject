@@ -1,3 +1,13 @@
 Wraps an object providing alternate views of the available members and ways to extend them. Members can be methods, properties, parameterized properties, etc.
 
-Compare with System.Management.Automation.PSCustomObject
+-----------------
+
+   Compare with System.Management.Automation.PSCustomObject
+
+      $ht = @{ num = 42; txt = 'hello world' }
+
+      ([PSObject]                          $ht ).GetType().FullName    # System.Collections.Hashtable
+      ([PSCustomObject]                    $ht ).GetType().FullName    # System.Management.Automation.PSCustomObject
+      (new-object -type psObject -property $ht ).GetType().FullName    # System.Management.Automation.PSCustomObject
+      (new-object       psObject -property $ht ).GetType().FullName    # System.Management.Automation.PSCustomObject
+

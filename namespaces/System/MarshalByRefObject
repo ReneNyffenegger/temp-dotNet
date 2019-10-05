@@ -1,1 +1,13 @@
-(get-item .).getType().BaseType
+Enables access to objects across application domain boundaries in applications that support remoting.
+
+Compare with System.ComponentModel.MarshallByValueComponent
+
+PS C:\> (get-item .).getType().BaseType
+
+
+----
+
+See also the comment for Microsoft.Build.Utilities.AppDomainIsolatedTask:
+  
+    Provides the same functionality as Task, but also derives from
+    MarshalByRefObject so that it can be instantiated in its own app domain.

@@ -1,3 +1,8 @@
 AppDomain represents an application domain, which is an isolated environment where applications execute. 
 
 PS:> [System.AppDomain]::CurrentDomain.GetAssemblies()
+
+
+TODO:
+   What is the relation between an AppDomain and and AppContainer
+     csc.exe -target:appcontainer.exe

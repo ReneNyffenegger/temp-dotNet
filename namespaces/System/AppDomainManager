@@ -1,0 +1,5 @@
+Provides a managed equivalent of an unmanaged host.
+
+An AppDomainManager object participates in the creation of new application
+domains in a process and can customize the new AppDomain before other managed
+code runs
