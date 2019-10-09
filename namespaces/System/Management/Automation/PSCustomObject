@@ -1,8 +1,11 @@
 Serves as a placeholder BaseObject when PSObject's constructor with no parameters is used.
 
 
+
 PowerShell:
 -----------
+
+   (get-itemProperty 'HKLM:\Software\Classes\Access.application\curVer').GetType().FullName
 
    (new-object  -typeName psObject).GetType().FullName
 
