@@ -16,6 +16,9 @@ digraph hierarchy {
    Security_Cryptography  [ label=< <table border="0"><tr><td align="text"><font face="Courier">Security.Cryptography</font></td></tr><tr><td align="text">Cryptographic services<br align="left"/></td></tr></table> > ];
    Security_Cryptography_X509Certificates  [ label=< <table border="0"><tr><td align="text"><font face="Courier">Security.Cryptography.X509Certificates</font></td></tr><tr><td align="text">X.509<br align="left"/></td></tr></table> > ];
    System_ComponentModel [ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel</font></td></tr><tr><td>…</td></tr></table> > ];
+
+   System_Data [ label=< <table border="0"><tr><td align="text"><font face="Courier">Data</font></td></tr><tr><td>…</td></tr></table> > ];
+   System_Data_Common [ label=< <table border="0"><tr><td align="text"><font face="Courier">Data.Common</font></td></tr><tr><td>…</td></tr></table> > ];
    
 
    Runtime [ label=< <table border="0">
@@ -44,6 +47,8 @@ digraph hierarchy {
                              <tr><td>…</td></tr></table> > ];
 
    System -> CodeDom;
+   System -> System_Data;
+   System_Data -> System_Data_Common;
    System -> Activities;
    System -> Data;
    System -> Collections;
