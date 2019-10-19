@@ -96,6 +96,21 @@ digraph hierarchy {
 
     System_ComponentModel_MarshalByValueComponent[ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.MarshalByValueComponent</font></td></tr><tr><td align="text">- Implements IComponent<br align="left"/>- Provides the base implementation<br align="left"/>for remotable components<br align="left"/>that are marshaled by value <br align="left"/>(a copy of the serialized object is passed).<br align="left"/></td></tr></table> > ];
 
+    System_Management_Automation_Cmdlet [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>Cmdlet</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td align="text">Base class for all PowerShell cmdLets<br align="left"/></td></tr></table> > ];
+
+    System_Management_Automation_PSCmdlet [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>PSCmdlet</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+
+    System_Management_Automation_Internal_InternalCommand [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>InternalCommand</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation.Internal</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
      System_MarshalByRefObject [ label=< <table border="0">
                              <tr><td align="text"><font face="Courier">MarshalByRefObject</font></td></tr>
                              <tr><td>…</td></tr></table> > ];
@@ -134,4 +149,8 @@ digraph hierarchy {
 
    System_Object -> System_MarshalByRefObject;
    System_MarshalByRefObject -> System_AppDomain;
+
+   System_Object -> System_Management_Automation_Internal_InternalCommand
+   System_Management_Automation_Internal_InternalCommand -> System_Management_Automation_Cmdlet
+   System_Management_Automation_Cmdlet -> System_Management_Automation_PSCmdlet
 }
