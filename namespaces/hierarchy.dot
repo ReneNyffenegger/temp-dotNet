@@ -16,18 +16,68 @@ digraph hierarchy {
 
     System_Nullable [ label = "Nullable<T>" ];
 
-    System_Reflection_Memberinfo [ label = "Reflection.MemberInfo" ];
-    System_Reflection_TypeInfo [ label=< <table border="0"><tr><td align="text"><font face="Courier">System.Reflection.TypeInfo</font></td></tr><tr><td>…</td></tr></table> > ];
+//  System_Reflection_Memberinfo [ label = "Reflection.MemberInfo" ];
 
-    System_Type [ label=< <table border="0"><tr><td align="text"><font face="Courier">Type</font></td></tr><tr><td>…</td></tr></table> > ];
+    System_Reflection_Memberinfo [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>MemberInfo</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">Reflection</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Reflection_TypeInfo [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>TypeInfo</b></font></td></tr>
+       <tr><td><font face="Courier">System.Reflection</font></td></tr>
+       <tr><td align="text">Abstract class<br align="left"/></td></tr></table> > ];
+
+    System_Reflection_TypeDelegator [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>TypeDelegator</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Reflection</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Reflection_Emit_TypeBuilder [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>TypeBuilder</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Reflection.Emit</font></td></tr>
+       <tr><td align="text">Define and create new<br align="left"/>classes/instances at runtime<br align="left"/></td></tr>
+    </table> > ];
+
+    System_Reflection_Emit_GenericTypeParameterBuilderClass [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>GenericParameterBuilderClass</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Reflection.Emit</font></td></tr>
+       <tr><td align="text">…<br align="left"/>…<br align="left"/></td></tr>
+    </table> > ];
+
+    System_Reflection_Emit_EnumBuilder [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>EnumBuilder</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Reflection.Emit</font></td></tr>
+       <tr><td align="text">…<br align="left"/>…<br align="left"/></td></tr>
+    </table> > ];
+
+    System_Type [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>Type</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
     System_Type -> System_Reflection_TypeInfo;
+    System_Type -> System_Reflection_TypeDelegator;
+    System_Type -> System_Reflection_Emit_TypeBuilder;
+    System_Type -> System_Reflection_Emit_GenericTypeParameterBuilderClass;
+    System_Type -> System_Reflection_Emit_EnumBuilder;
 
     System_Object -> System_ValueType;
 
     System_Object -> System_Nullable;
 
-    System_Attribute [ label=< <table border="0"><tr><td align="text"><font face="Courier">System.Attribute</font></td></tr><tr><td>…</td></tr></table> > ];
-    System_DefaultPropertyAttribute [ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.DefaultPropertyAttribute</font></td></tr><tr><td>…</td></tr></table> > ];
+//  System_Attribute [ label=< <table border="0"><tr><td align="text"><font face="Courier">System.Attribute</font></td></tr><tr><td>…</td></tr></table> > ];
+    System_Attribute [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>Attribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+//  System_DefaultPropertyAttribute [ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.DefaultPropertyAttribute</font></td></tr><tr><td>…</td></tr></table> > ];
+    System_DefaultPropertyAttribute [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DefaultPropertyAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
     System_Environment [ label=< <table border="0"><tr><td align="text"><font face="Courier">Environment</font></td></tr><tr><td>Current environment/platform</td></tr></table> > ];
 
     System_Data_DataTable[ label=< <table border="0"><tr><td align="text"><font face="Courier">Data.DataTable</font></td></tr><tr><td align="text">In-Memory table<br align="left"/></td></tr></table> > ];
@@ -35,8 +85,8 @@ digraph hierarchy {
     System_ComponentModel_MarshalByValueComponent-> System_Data_DataTable;
 
     System_Management_Automation_PSObject [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>PSObject</b></font></td></tr>
        <tr><td align="text"><font face="Courier">Management.Automation</font></td></tr>
-       <tr><td align="text"><font face="Courier">PSObject</font></td></tr>
        <tr><td>…</td></tr></table> > ];
 
     System_Management_Automation_PSCusteomObject [ label=< <table border="0">
