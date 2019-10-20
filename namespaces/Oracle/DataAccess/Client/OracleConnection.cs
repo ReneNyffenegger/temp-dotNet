@@ -1,3 +1,13 @@
+//
+//   set ORACLE_HOME=c:\oracle\18c
+//   csc                                                              OracleConnection.cs
+//   csc -reference:%oracle_home%\ODP.NET\bin\4\Oracle.DataAccess.dll OracleConnection.cs
+//   csc -appconfig:OracleConnection.exe.config -reference:%oracle_home%\ODP.NET\bin\4\Oracle.DataAccess.dll OracleConnection.cs
+//
+//   copy ...\...dll .
+//   OracleConnection.exe
+//
+//
 using System;
 using System.Data;
 using Oracle.DataAccess.Client; 
