@@ -1,0 +1,7 @@
+[Reflection.Assembly]::LoadFile('C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Windows.Forms.dll')
+
+$f = new-object 'System.Windows.Forms.OpenFileDialog'
+
+$f.CustomPlaces.Count
+
+$f.CustomPlaces.GetType()
