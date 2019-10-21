@@ -56,6 +56,34 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier">System</font></td></tr>
        <tr><td>…</td></tr></table> > ];
 
+    System_Text_Encoding [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>Encoding</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
+       <tr><td align="text">$OutputEncoding<br align="left"/></td></tr></table> > ];
+
+    System_Object -> System_Text_Encoding
+
+    System_Text_EncodingNLS [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>EncodingNLS</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Text_Encoding -> System_Text_EncodingNLS
+
+    System_Text_BaseCodePageEncoding [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>BaseCodePageEncoding</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Text_EncodingNLS -> System_Text_BaseCodePageEncoding
+
+    System_Text_SBSCCodePageEncoding [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>SBSCCodePageEncoding</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
+       <tr><td align="text">[System.Console]::Encoding</td></tr></table> > ];
+
+    System_Text_BaseCodePageEncoding -> System_Text_SBSCCodePageEncoding
+
     System_Type -> System_Reflection_TypeInfo;
     System_Type -> System_Reflection_TypeDelegator;
     System_Type -> System_Reflection_Emit_TypeBuilder;
