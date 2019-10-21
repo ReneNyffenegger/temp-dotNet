@@ -175,6 +175,14 @@ digraph hierarchy {
                              <tr><td align="text"><font face="Courier">AppDomain</font></td></tr>
                              <tr><td>Application Domain</td></tr></table> > ];
 
+    Microsoft_PowerShell_Commands_ByteCollection [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>ByteCollection</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">Microsoft.PowerShell.Commands</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Object -> Microsoft_PowerShell_Commands_ByteCollection
+
+
     System_CLSCompliantAttribute [ label = "CLSCompliantAttribute" ];
 
     System_ValueType -> System_Enum;
