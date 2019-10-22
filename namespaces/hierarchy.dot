@@ -136,17 +136,32 @@ digraph hierarchy {
     System_ComponentModel_Component [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>Component</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
-       <tr><td>…</td></tr></table> > ];
+       <tr><td align="text">Base implementation for <font face="monospace">IComponent</font><br align="left"/>Enables object sharing between applications<br align="left"/></td></tr></table> > ];
 
     System_Data_Common_DbConnection [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DbConnection</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
        <tr><td>Base class for DB connections</td></tr></table> > ];
 
+    System_Data_Common_DbCommand [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DbCommand</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
+       <tr><td>SQL statement or stored procedure</td></tr></table> > ];
+
     Oracle_DataAccess_Client_OracleConnection [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>OracleConnection</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">System.DataAccess.Client</font></td></tr>
-       <tr><td>…</td></tr></table> > ];
+       <tr><td align="text"><font face="Courier">Oracle.DataAccess.Client</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    Oracle_ManagedDataAccess_Client_OracleConnection [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>OracleConnection</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">Oracle.ManagedDataAccess.Client</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    Oracle_ManagedDataAccess_Client_OracleCommand [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>OracleCommand</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">Oracle.ManagedDataAccess.Client</font></td></tr>
+       <tr><td></td></tr></table> > ];
 
     System_Management_Automation_Cmdlet [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>Cmdlet</b></font></td></tr>
@@ -221,4 +236,9 @@ digraph hierarchy {
    System_MarshalByRefObject -> System_ComponentModel_Component
    System_ComponentModel_Component -> System_Data_Common_DbConnection
    System_Data_Common_DbConnection -> Oracle_DataAccess_Client_OracleConnection
+   System_Data_Common_DbConnection -> Oracle_ManagedDataAccess_Client_OracleConnection
+
+   System_ComponentModel_Component -> System_Data_Common_DbCommand
+   System_Data_Common_DbCommand -> Oracle_ManagedDataAccess_Client_OracleCommand
+
 }
