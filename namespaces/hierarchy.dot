@@ -148,6 +148,13 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
        <tr><td>SQL statement or stored procedure</td></tr></table> > ];
 
+    System_Data_Common_DbDataReader [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DbDataReader</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
+       <tr><td align="text">Read forward-only rows<br align="left"/>from data source<br align="left"/></td></tr></table> > ];
+
+    System_MarshalByRefObject -> System_Data_Common_DbDataReader
+
     Oracle_DataAccess_Client_OracleConnection [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>OracleConnection</b></font></td></tr>
        <tr><td align="text"><font face="Courier">Oracle.DataAccess.Client</font></td></tr>
@@ -162,6 +169,13 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier"><b>OracleCommand</b></font></td></tr>
        <tr><td align="text"><font face="Courier">Oracle.ManagedDataAccess.Client</font></td></tr>
        <tr><td></td></tr></table> > ];
+
+    Oracle_ManagedDataAccess_Client_OracleDataReader [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>OracleDataReader</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">Oracle.ManagedDataAccess.Client</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    System_Data_Common_DbDataReader -> Oracle_ManagedDataAccess_Client_OracleDataReader
 
     System_Management_Automation_Cmdlet [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>Cmdlet</b></font></td></tr>
@@ -181,10 +195,7 @@ digraph hierarchy {
     System_MarshalByRefObject [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>MarshalByRefObject</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System</font></td></tr>
-       <tr><td>…</td></tr></table> > ];
-//   System_MarshalByRefObject [ label=< <table border="0">
-//                           <tr><td align="text"><font face="Courier">MarshalByRefObject</font></td></tr>
-//                           <tr><td>…</td></tr></table> > ];
+       <tr><td align="text">Access object accross<br align="left"/>application boundaries<br align="left"/></td></tr></table> > ];
 
      System_AppDomain [ label=< <table border="0">
                              <tr><td align="text"><font face="Courier">AppDomain</font></td></tr>
