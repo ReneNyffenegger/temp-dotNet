@@ -16,6 +16,21 @@ digraph hierarchy {
 
     System_Nullable [ label = "Nullable<T>" ];
 
+    System_Delegate [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b><i>Delegate</i></b></font></td></tr>
+       <tr><td><font face="Courier">System</font></td></tr>
+       <tr><td align="text">…</td></tr></table> > ];
+
+    System_Object -> System_Delegate
+
+    System_EventHandler [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>EventHandler</b></font></td></tr>
+       <tr><td><font face="Courier">System</font></td></tr>
+       <tr><td align="text">Method that handles<br align="left"/>events without data<br align="left"/></td></tr></table> > ];
+
+    System_Delegate -> System_EventHandler
+
+
 //  System_Reflection_Memberinfo [ label = "Reflection.MemberInfo" ];
 
     System_Reflection_Memberinfo [ label=< <table border="0">
