@@ -108,9 +108,19 @@ digraph hierarchy {
 
     System_Environment [ label=< <table border="0"><tr><td align="text"><font face="Courier">Environment</font></td></tr><tr><td>Current environment/platform</td></tr></table> > ];
 
-    System_Data_DataTable[ label=< <table border="0"><tr><td align="text"><font face="Courier">Data.DataTable</font></td></tr><tr><td align="text">In-Memory table<br align="left"/></td></tr></table> > ];
-
+//  System_Data_DataTable[ label=< <table border="0"><tr><td align="text"><font face="Courier">Data.DataTable</font></td></tr><tr><td align="text">In-Memory table<br align="left"/></td></tr></table> > ];
+    System_Data_DataTable [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DataTable</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
+       <tr><td>In-memory cache of data</td></tr></table> > ];
     System_ComponentModel_MarshalByValueComponent-> System_Data_DataTable;
+
+    System_Data_DataSet [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DataSet</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
+       <tr><td>In-memory data table</td></tr></table> > ];
+
+    System_ComponentModel_MarshalByValueComponent-> System_Data_DataSet;
 
     System_Management_Automation_PSObject [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>PSObject</b></font></td></tr>
@@ -147,6 +157,13 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier"><b>DbCommand</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
        <tr><td>SQL statement or stored procedure</td></tr></table> > ];
+
+    System_IO_Stream [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>Stream</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    System_MarshalByRefObject -> System_IO_Stream
 
     System_Data_Common_DbDataReader [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DbDataReader</b></font></td></tr>
