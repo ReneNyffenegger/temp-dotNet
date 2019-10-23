@@ -172,6 +172,20 @@ digraph hierarchy {
 
     System_MarshalByRefObject -> System_Data_Common_DbDataReader
 
+    System_Net_WebRequest [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b><i>WebRequest</i></b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Net</font></td></tr>
+       <tr><td align="text">URI requests</td></tr></table> > ];
+
+    System_MarshalByRefObject -> System_Net_WebRequest
+
+    System_Net_HttpWebRequest [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>HttpWebRequest</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Net</font></td></tr>
+       <tr><td align="text">HTTP requests</td></tr></table> > ];
+
+    System_Net_WebRequest -> System_Net_HttpWebRequest
+
     Oracle_DataAccess_Client_OracleConnection [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>OracleConnection</b></font></td></tr>
        <tr><td align="text"><font face="Courier">Oracle.DataAccess.Client</font></td></tr>
