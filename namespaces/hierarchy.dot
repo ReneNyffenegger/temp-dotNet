@@ -23,6 +23,20 @@ digraph hierarchy {
 
     System_Object -> System_Delegate
 
+    System_Func [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b><i>Func&lt;…&gt;</i></b></font></td></tr>
+       <tr><td><font face="Courier">System</font></td></tr>
+       <tr><td align="text">…</td></tr></table> > ];
+
+    System_Delegate -> System_Func;
+
+    System_Action [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b><i>Action&lt;…&gt;</i></b></font></td></tr>
+       <tr><td><font face="Courier">System</font></td></tr>
+       <tr><td align="text">…</td></tr></table> > ];
+
+    System_Delegate -> System_Action;
+
     System_EventHandler [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>EventHandler</b></font></td></tr>
        <tr><td><font face="Courier">System</font></td></tr>
