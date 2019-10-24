@@ -30,6 +30,13 @@ digraph hierarchy {
 
     System_Delegate -> System_Func;
 
+    System_MulticastDelegate [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b><i>MulticastDelegate</i></b></font></td></tr>
+       <tr><td><font face="Courier">System</font></td></tr>
+       <tr><td align="text">…</td></tr></table> > ];
+
+    System_Delegate -> System_MulticastDelegate;
+
     System_Action [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b><i>Action&lt;…&gt;</i></b></font></td></tr>
        <tr><td><font face="Courier">System</font></td></tr>
@@ -44,6 +51,24 @@ digraph hierarchy {
 
     System_Delegate -> System_EventHandler
 
+
+    System_Collections_IEnumerable [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>IEnumerable</b></font></td></tr>
+       <tr><td><font face="Courier">System.Collections</font></td></tr>
+       <tr><td align="text">Used for the <font face="Courier">foreach</font> keyword<br align="left"/></td></tr></table> > ];
+
+    System_Collections_IEnumerator [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>IEnumerator</b></font></td></tr>
+       <tr><td><font face="Courier">System.Collections</font></td></tr>
+       <tr><td align="text">Returned by <font face="Courier">IEnumerable.GetEnumerator()</font><br align="left"/></td></tr></table> > ];
+
+    System_Collections_Generic_IEnumerable [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>IEnumerable&lt;T&gt;</b></font></td></tr>
+       <tr><td><font face="Courier">System.Collections.Generic</font></td></tr>
+       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+
+    System_Collections_IEnumerable -> System_Collections_Generic_IEnumerable
+    
 
 //  System_Reflection_Memberinfo [ label = "Reflection.MemberInfo" ];
 
@@ -137,12 +162,38 @@ digraph hierarchy {
 
     System_Environment [ label=< <table border="0"><tr><td align="text"><font face="Courier">Environment</font></td></tr><tr><td>Current environment/platform</td></tr></table> > ];
 
-//  System_Data_DataTable[ label=< <table border="0"><tr><td align="text"><font face="Courier">Data.DataTable</font></td></tr><tr><td align="text">In-Memory table<br align="left"/></td></tr></table> > ];
+    System_ComponentModel_MarshalByValueComponent [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>MarshalByValueComponent</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+
+    System_MarshalByRefObject [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>MarshalByRefObject</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td align="text">Access object accross<br align="left"/>application boundaries<br align="left"/></td></tr></table> > ];
+
     System_Data_DataTable [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DataTable</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
-       <tr><td>In-memory cache of data</td></tr></table> > ];
+       <tr><td>In-memory cache of data<br align="left"/></td></tr></table> > ];
+
     System_ComponentModel_MarshalByValueComponent-> System_Data_DataTable;
+
+    System_Windows_Forms_Control [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>Control</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Windows.Forms</font></td></tr>
+       <tr><td>Controls such as buttons etc.<br align="left"/></td></tr></table> > ];
+
+    System_ComponentModel_Component -> System_Windows_Forms_Control
+
+    System_Data_DataRelation [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DataRelation</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
+       <tr><td>Parent-child relation between<br align="left"/>two <font face="Courier">DataTable</font> objects<br align="left"/></td></tr></table> > ];
+
+    System_Object -> System_Data_DataRelation
+
 
     System_Data_DataSet [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DataSet</b></font></td></tr>
@@ -166,11 +217,6 @@ digraph hierarchy {
 //     <tr><td align="text"><font face="Courier">PSCustomObject</font></td></tr>
 //     <tr><td>…</td></tr></table> > ];
 
-//  System_ComponentModel_MarshalByValueComponent[ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.MarshalByValueComponent</font></td></tr><tr><td align="text">- Implements IComponent<br align="left"/>- Provides the base implementation<br align="left"/>for remotable components<br align="left"/>that are marshaled by value <br align="left"/>(a copy of the serialized object is passed).<br align="left"/></td></tr></table> > ];
-    System_ComponentModel_MarshalByValueComponent [ label=< <table border="0">
-       <tr><td align="text"><font face="Courier"><b>MarshalByValueComponent</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
-       <tr><td>…</td></tr></table> > ];
 
     System_ComponentModel_Component [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>Component</b></font></td></tr>
@@ -265,11 +311,6 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier"><b>InternalCommand</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Management.Automation.Internal</font></td></tr>
        <tr><td>…</td></tr></table> > ];
-
-    System_MarshalByRefObject [ label=< <table border="0">
-       <tr><td align="text"><font face="Courier"><b>MarshalByRefObject</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">System</font></td></tr>
-       <tr><td align="text">Access object accross<br align="left"/>application boundaries<br align="left"/></td></tr></table> > ];
 
      System_AppDomain [ label=< <table border="0">
                              <tr><td align="text"><font face="Courier">AppDomain</font></td></tr>
