@@ -247,6 +247,13 @@ digraph hierarchy {
 
     System_MarshalByRefObject -> System_Data_Common_DbDataReader
 
+    System_Data_DataTableReader [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DataTableReader</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
+       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+
+    System_Data_Common_DbDataReader -> System_Data_DataTableReader
+
     System_Net_WebRequest [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b><i>WebRequest</i></b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Net</font></td></tr>
