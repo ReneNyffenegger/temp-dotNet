@@ -204,8 +204,38 @@ digraph hierarchy {
 
     System_Management_Automation_PSObject [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>PSObject</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">Management.Automation</font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
        <tr><td>…</td></tr></table> > ];
+
+    System_Object -> System_Management_Automation_PSObject;
+
+    System_Management_Automation_PSVariable [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>PSVariable</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+
+    System_Object -> System_Management_Automation_PSVariable
+
+    System_Management_Automation_CommandInfo [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>CommandInfo</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Object -> System_Management_Automation_CommandInfo
+
+    System_Management_Automation_FunctionInfo [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>FunctionInfo</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Management_Automation_CommandInfo -> System_Management_Automation_FunctionInfo
+
+    System_Management_Automation_AliasInfo [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>AliasInfo</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Management_Automation_CommandInfo -> System_Management_Automation_AliasInfo
 
     System_Management_Automation_PSCustomObject [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>PSCustomObject</b></font></td></tr>
@@ -239,6 +269,27 @@ digraph hierarchy {
        <tr><td></td></tr></table> > ];
 
     System_MarshalByRefObject -> System_IO_Stream
+
+    System_IO_FileSystemInfo [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>FileSystemInfo</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    System_MarshalByRefObject -> System_IO_FileSystemInfo
+
+    System_IO_DirectoryInfo [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DirectoryInfo</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    System_IO_FileSystemInfo -> System_IO_DirectoryInfo
+
+    System_IO_FileInfo [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>FileInfo</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    System_IO_FileSystemInfo -> System_IO_FileInfo
 
     System_Data_Common_DbDataReader [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DbDataReader</b></font></td></tr>
@@ -314,6 +365,7 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
        <tr><td align="text">…<br align="left"/></td></tr></table> > ];
 
+
     System_Management_Automation_Internal_InternalCommand [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>InternalCommand</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Management.Automation.Internal</font></td></tr>
@@ -355,7 +407,6 @@ digraph hierarchy {
 
     System_Object -> System_ComponentModel_MarshalByValueComponent;
 
-    System_Object -> System_Management_Automation_PSObject;
     System_Object -> System_Management_Automation_PSCustomObject;
 
 
