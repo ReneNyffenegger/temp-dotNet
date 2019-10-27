@@ -14,6 +14,7 @@ class P {
         names.Add("Bar");
         names.Add("Baz");
 
+
 //      names.ForEach(Console.WriteLine);
         names.ForEach(callBack);
 
@@ -22,6 +23,18 @@ class P {
         names.ForEach( delegate(String name) {
             Console.WriteLine("Anonymous function: " + name);
         });
+
+     // --------------------------------------------------
+
+     //
+     // Use object initializer:
+     //
+        List<int> numbers = new List<int> {1,1,2,3,5,8};
+        foreach (int i in numbers) {
+          Console.WriteLine("i = " + i);
+        }
+
+
     }
 
 //  private static void Print(string s)
