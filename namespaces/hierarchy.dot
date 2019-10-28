@@ -6,6 +6,81 @@ digraph hierarchy {
 
 
     System_ValueType [ label=< <table border="0"><tr><td align="text"><font face="Courier">ValueType</font></td></tr><tr><td>…</td></tr></table> > ];
+
+    System_Object -> System_ValueType;
+
+    System_Nullable [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>Nullable&lt;T&gt;</b></font></td></tr>
+       <tr><td><font face="Courier">System</font></td></tr>
+       <tr><td align="text">…</td></tr></table> > ];
+
+    System_Object -> System_Nullable // }
+
+    System_Delegate [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b><i>Delegate</i></b></font></td></tr>
+       <tr><td><font face="Courier">System</font></td></tr>
+       <tr><td align="text">…</td></tr></table> > ];
+
+    System_Object -> System_Delegate // }
+
+    System_Reflection_Memberinfo [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>MemberInfo</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">Reflection</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Object -> System_Reflection_Memberinfo; // }
+
+    System_Text_Encoding [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>Encoding</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
+       <tr><td align="text">$OutputEncoding<br align="left"/></td></tr></table> > ];
+
+    System_Object -> System_Text_Encoding // }
+
+    System_Environment [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>Environment</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td>Current environment/platform</td></tr></table> > ];
+
+    System_Object -> System_Environment; // }
+
+    System_Attribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>Attribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+
+    System_Object -> System_Attribute; // }
+
+    System_AttributeUsageAttribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>AttributeUsageAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td>How other attributes are used</td></tr></table> > ];
+
+    System_Attribute -> System_AttributeUsageAttribute // }
+
+    System_MarshalByRefObject [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>MarshalByRefObject</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td align="text">Access object accross<br align="left"/>application boundaries<br align="left"/></td></tr></table> > ];
+
+    System_Object -> System_MarshalByRefObject; // }
+
+    System_ComponentModel_MarshalByValueComponent [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>MarshalByValueComponent</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Object -> System_ComponentModel_MarshalByValueComponent // }
+
+    System_Data_DataRelation [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>DataRelation</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
+       <tr><td>Parent-child relation between<br align="left"/>two <font face="Courier">DataTable</font> objects<br align="left"/></td></tr></table> > ];
+
+    System_Object -> System_Data_DataRelation // }
+
+
     System_DateTime [ label=< <table border="0"><tr><td align="text"><font face="Courier">DateTime</font></td></tr><tr><td>…</td></tr></table> > ];
 
     System_Enum [ label = "Enum" ];
@@ -14,14 +89,7 @@ digraph hierarchy {
 
     System_Void [ label = "Void" ];
 
-    System_Nullable [ label = "Nullable<T>" ];
 
-    System_Delegate [ label=< <table border="0">
-       <tr><td align="text"><font face="Courier"><b><i>Delegate</i></b></font></td></tr>
-       <tr><td><font face="Courier">System</font></td></tr>
-       <tr><td align="text">…</td></tr></table> > ];
-
-    System_Object -> System_Delegate
 
     System_Func [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b><i>Func&lt;…&gt;</i></b></font></td></tr>
@@ -70,12 +138,7 @@ digraph hierarchy {
     System_Collections_IEnumerable -> System_Collections_Generic_IEnumerable
     
 
-//  System_Reflection_Memberinfo [ label = "Reflection.MemberInfo" ];
 
-    System_Reflection_Memberinfo [ label=< <table border="0">
-       <tr><td align="text"><font face="Courier"><b>MemberInfo</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">Reflection</font></td></tr>
-       <tr><td>…</td></tr></table> > ];
 
     System_Reflection_TypeInfo [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>TypeInfo</b></font></td></tr>
@@ -110,12 +173,6 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier">System</font></td></tr>
        <tr><td>…</td></tr></table> > ];
 
-    System_Text_Encoding [ label=< <table border="0">
-       <tr><td align="text"><font face="Courier"><b>Encoding</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
-       <tr><td align="text">$OutputEncoding<br align="left"/></td></tr></table> > ];
-
-    System_Object -> System_Text_Encoding
 
     System_Text_EncodingNLS [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>EncodingNLS</b></font></td></tr>
@@ -144,34 +201,17 @@ digraph hierarchy {
     System_Type -> System_Reflection_Emit_GenericTypeParameterBuilderClass;
     System_Type -> System_Reflection_Emit_EnumBuilder;
 
-    System_Object -> System_ValueType;
 
-    System_Object -> System_Nullable;
 
-//  System_Attribute [ label=< <table border="0"><tr><td align="text"><font face="Courier">System.Attribute</font></td></tr><tr><td>…</td></tr></table> > ];
-    System_Attribute [ label=< <table border="0">
-       <tr><td align="text"><font face="Courier"><b>Attribute</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">System</font></td></tr>
-       <tr><td>…</td></tr></table> > ];
 
-//  System_DefaultPropertyAttribute [ label=< <table border="0"><tr><td align="text"><font face="Courier">ComponentModel.DefaultPropertyAttribute</font></td></tr><tr><td>…</td></tr></table> > ];
     System_DefaultPropertyAttribute [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DefaultPropertyAttribute</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
        <tr><td>…</td></tr></table> > ];
 
-    System_Environment [ label=< <table border="0"><tr><td align="text"><font face="Courier">Environment</font></td></tr><tr><td>Current environment/platform</td></tr></table> > ];
-
-    System_ComponentModel_MarshalByValueComponent [ label=< <table border="0">
-       <tr><td align="text"><font face="Courier"><b>MarshalByValueComponent</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
-       <tr><td>…</td></tr></table> > ];
 
 
-    System_MarshalByRefObject [ label=< <table border="0">
-       <tr><td align="text"><font face="Courier"><b>MarshalByRefObject</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">System</font></td></tr>
-       <tr><td align="text">Access object accross<br align="left"/>application boundaries<br align="left"/></td></tr></table> > ];
+
 
     System_Data_DataTable [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DataTable</b></font></td></tr>
@@ -180,20 +220,41 @@ digraph hierarchy {
 
     System_ComponentModel_MarshalByValueComponent-> System_Data_DataTable;
 
-    System_Windows_Forms_Control [ label=< <table border="0">
+
+    System_Web_UI_WebControls_WebControl [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>WebControl</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Web.UI.WebControls</font></td></tr>
+       <tr><td>…<br align="left"/>…</td></tr></table> > ];
+
+    System_Web_UI_Control -> System_Web_UI_WebControls_WebControl
+
+    System_Windows_Forms_Control [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>Control</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Windows.Forms</font></td></tr>
        <tr><td>Controls such as buttons etc.<br align="left"/></td></tr></table> > ];
 
-    System_ComponentModel_Component -> System_Windows_Forms_Control
+    System_ComponentModel_Component -> System_Windows_Forms_Control // }
 
-    System_Data_DataRelation [ label=< <table border="0">
-       <tr><td align="text"><font face="Courier"><b>DataRelation</b></font></td></tr>
-       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
-       <tr><td>Parent-child relation between<br align="left"/>two <font face="Courier">DataTable</font> objects<br align="left"/></td></tr></table> > ];
+    System_Windows_Forms_ScrollableControl [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>ScrollableControl</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Windows.Forms</font></td></tr>
+       <tr><td align="text">Auto-scrolling controls<br align="left"/></td></tr></table> > ];
 
-    System_Object -> System_Data_DataRelation
+    System_Windows_Forms_Control -> System_Windows_Forms_ScrollableControl // }
 
+    System_Windows_Forms_ContainerControl [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>ContainerControl</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Windows.Forms</font></td></tr>
+       <tr><td align="text">Container for controls<br align="left"/>Provides focus management<br align="left"/></td></tr></table> > ];
+
+    System_Windows_Forms_ScrollableControl -> System_Windows_Forms_ContainerControl // }
+
+    System_Windows_Forms_Form [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>Form</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Windows.Forms</font></td></tr>
+       <tr><td align="text">Window or Dialog for<br align="left"/>application's GUI<br align="left"/></td></tr></table> > ];
+
+    System_Windows_Forms_ContainerControl -> System_Windows_Forms_Form // }
 
     System_Data_DataSet [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DataSet</b></font></td></tr>
@@ -216,19 +277,33 @@ digraph hierarchy {
 
     System_Object -> System_Management_Automation_PSVariable
 
-    System_Management_Automation_CommandInfo [ label=< <table border="0">
+    System_Management_Automation_CommandInfo [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>CommandInfo</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
        <tr><td>…</td></tr></table> > ];
 
-    System_Object -> System_Management_Automation_CommandInfo
+    System_Object -> System_Management_Automation_CommandInfo // }
 
-    System_Management_Automation_FunctionInfo [ label=< <table border="0">
+    System_Management_Automation_FunctionInfo [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>FunctionInfo</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
        <tr><td>…</td></tr></table> > ];
 
-    System_Management_Automation_CommandInfo -> System_Management_Automation_FunctionInfo
+    System_Management_Automation_CommandInfo -> System_Management_Automation_FunctionInfo // }
+
+    System_Management_Automation_CmdletInfo [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>CmdletInfo</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Management_Automation_CommandInfo -> System_Management_Automation_CmdletInfo // }
+
+    System_Web_UI_Control [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>Control</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Web.UI</font></td></tr>
+       <tr><td>…<br align="left"/>ASP.NET server controls</td></tr></table> > ];
+
+    System_Object -> System_Web_UI_Control
 
     System_Management_Automation_AliasInfo [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>AliasInfo</b></font></td></tr>
@@ -242,16 +317,40 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
        <tr><td>…</td></tr></table> > ];
 
-//  System_Management_Automation_PSCustomObject [ label=< <table border="0">
-//     <tr><td align="text"><font face="Courier">Management.Automation</font></td></tr>
-//     <tr><td align="text"><font face="Courier">PSCustomObject</font></td></tr>
-//     <tr><td>…</td></tr></table> > ];
+    System_Management_Automation_Internal_CmdletMetadataAttribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>CmdletMetadataAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation.Internal</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
 
+    System_Attribute -> System_Management_Automation_Internal_CmdletMetadataAttribute // }
 
-    System_ComponentModel_Component [ label=< <table border="0">
+    System_Management_Automation_CmdletCommonMetadataAttribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>CmdletCommonMetadataAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Management_Automation_Internal_CmdletMetadataAttribute -> System_Management_Automation_CmdletCommonMetadataAttribute // }
+
+    System_Management_Automation_CmdletBindingAttribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>CmdletBindingAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td align="text">cmdlet parameter binding<br align="left"/>rather than script parameter binding<br align="left"/></td></tr></table> > ];
+
+    System_Management_Automation_CmdletCommonMetadataAttribute -> System_Management_Automation_CmdletBindingAttribute // }
+
+    System_ComponentModel_Component [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>Component</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
        <tr><td align="text">Base implementation for <font face="monospace">IComponent</font><br align="left"/>Enables object sharing between applications<br align="left"/></td></tr></table> > ];
+
+    System_MarshalByRefObject -> System_ComponentModel_Component // }
+
+    System_Diagnosticts_Process [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>Process</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Diagnostics</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_ComponentModel_Component -> System_Diagnosticts_Process // }
 
     System_Data_Common_DbConnection [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DbConnection</b></font></td></tr>
@@ -392,10 +491,7 @@ digraph hierarchy {
 
     System_ValueType -> System_Void;
 
-    System_Object -> System_Reflection_Memberinfo;
-    System_Object -> System_Environment;
 
-    System_Object -> System_Attribute;
 
     System_Attribute -> System_CLSCompliantAttribute;
     System_Attribute -> System_DefaultPropertyAttribute;
@@ -405,19 +501,16 @@ digraph hierarchy {
     System_RuntimeType [ label=< <table border="0"><tr><td align="text"><font face="Courier">RuntimeType</font></td></tr><tr><td>Not documented?</td></tr></table> > ];
     System_Reflection_TypeInfo -> System_RuntimeType;
 
-    System_Object -> System_ComponentModel_MarshalByValueComponent;
 
     System_Object -> System_Management_Automation_PSCustomObject;
 
 
-   System_Object -> System_MarshalByRefObject;
    System_MarshalByRefObject -> System_AppDomain;
 
    System_Object -> System_Management_Automation_Internal_InternalCommand
    System_Management_Automation_Internal_InternalCommand -> System_Management_Automation_Cmdlet
    System_Management_Automation_Cmdlet -> System_Management_Automation_PSCmdlet
 
-   System_MarshalByRefObject -> System_ComponentModel_Component
    System_ComponentModel_Component -> System_Data_Common_DbConnection
    System_Data_Common_DbConnection -> Oracle_DataAccess_Client_OracleConnection
    System_Data_Common_DbConnection -> Oracle_ManagedDataAccess_Client_OracleConnection
