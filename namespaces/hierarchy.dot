@@ -112,12 +112,12 @@ digraph hierarchy {
 
     System_Delegate -> System_Action;
 
-    System_EventHandler [ label=< <table border="0">
+    System_EventHandler [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>EventHandler</b></font></td></tr>
        <tr><td><font face="Courier">System</font></td></tr>
        <tr><td align="text">Method that handles<br align="left"/>events without data<br align="left"/></td></tr></table> > ];
 
-    System_Delegate -> System_EventHandler
+    System_Delegate -> System_EventHandler // }
 
     System_Collections_IEnumerable [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>IEnumerable</b></font></td></tr>
@@ -380,12 +380,33 @@ digraph hierarchy {
        <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
        <tr><td>SQL statement or stored procedure</td></tr></table> > ];
 
-    System_IO_Stream [ label=< <table border="0">
+    System_IO_Stream [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>Stream</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
        <tr><td></td></tr></table> > ];
 
-    System_MarshalByRefObject -> System_IO_Stream
+    System_MarshalByRefObject -> System_IO_Stream // }
+
+    System_IO_FileStream [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>FileStream</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    System_IO_Stream -> System_IO_FileStream // }
+
+    System_IO_TextReader [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b><i>TextReader</i></b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    System_MarshalByRefObject -> System_IO_TextReader // }
+
+    System_IO_StreamReader [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>StreamReader</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+       <tr><td></td></tr></table> > ];
+
+    System_IO_TextReader -> System_IO_StreamReader // }
 
     System_IO_FileSystemInfo [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>FileSystemInfo</b></font></td></tr>
