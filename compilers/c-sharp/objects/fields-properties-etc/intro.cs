@@ -1,3 +1,6 @@
+//
+//     https://stackoverflow.com/questions/295104/what-is-the-difference-between-a-field-and-a-property
+//
 public class C {
 
    private string field;
