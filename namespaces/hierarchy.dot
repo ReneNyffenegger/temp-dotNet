@@ -119,26 +119,44 @@ digraph hierarchy {
 
     System_Delegate -> System_EventHandler
 
-
-    System_Collections_IEnumerable [ label=< <table border="0">
+    System_Collections_IEnumerable [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>IEnumerable</b></font></td></tr>
        <tr><td><font face="Courier">System.Collections</font></td></tr>
        <tr><td align="text">Used for the <font face="Courier">foreach</font> keyword<br align="left"/></td></tr></table> > ];
+    // }
 
     System_Collections_IEnumerator [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>IEnumerator</b></font></td></tr>
        <tr><td><font face="Courier">System.Collections</font></td></tr>
        <tr><td align="text">Returned by <font face="Courier">IEnumerable.GetEnumerator()</font><br align="left"/></td></tr></table> > ];
 
-    System_Collections_Generic_IEnumerable [ label=< <table border="0">
+    System_Collections_Generic_IEnumerable [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>IEnumerable&lt;T&gt;</b></font></td></tr>
        <tr><td><font face="Courier">System.Collections.Generic</font></td></tr>
        <tr><td align="text">…<br align="left"/></td></tr></table> > ];
 
-    System_Collections_IEnumerable -> System_Collections_Generic_IEnumerable
-    
+    System_Collections_IEnumerable -> System_Collections_Generic_IEnumerable // }
 
+    System_Collections_Specialized_NameObjectCollectionBase [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b><i>NameObjectCollectionBase</i></b></font></td></tr>
+       <tr><td><font face="Courier">System.Collections.Specialized</font></td></tr>
+       <tr><td align="text">Abstract base class for string-key<br align="left"/>object-value pairs<br align="left"/></td></tr></table> > ];
 
+    System_Object -> System_Collections_Specialized_NameObjectCollectionBase // }
+
+    System_Collections_Specialized_NameObjectCollection [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>NameObjectCollection</b></font></td></tr>
+       <tr><td><font face="Courier">System.Collections.Specialized</font></td></tr>
+       <tr><td align="text">…<br align="left"/></td></tr> </table> > ]
+
+    System_Collections_Specialized_NameObjectCollectionBase -> System_Collections_Specialized_NameObjectCollection // }
+
+    System_Net_WebHeaderCollection [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>WebHeaderCollection</b></font></td></tr>
+       <tr><td><font face="Courier">System.Net</font></td></tr>
+       <tr><td align="text">…<br align="left"/></td></tr> </table> > ]
+
+   System_Collections_Specialized_NameObjectCollection -> System_Net_WebHeaderCollection // }
 
     System_Reflection_TypeInfo [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>TypeInfo</b></font></td></tr>
