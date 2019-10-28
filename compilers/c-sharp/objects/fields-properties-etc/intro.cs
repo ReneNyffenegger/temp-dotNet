@@ -12,6 +12,11 @@ public class C {
 
 // AutoProperty generates private field for us
    public int auto_prop{get; set;}
+
+// public int XYZ {
+//   int  get(     ) { return XYZ;}
+//   void set(int v) { XYZ = v   ;}
+// }
 }
 
 public class M {
