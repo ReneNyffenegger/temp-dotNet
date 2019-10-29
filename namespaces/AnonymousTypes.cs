@@ -1,3 +1,6 @@
+//
+//  Anonymous types is an important feature for LINQ.
+//
 class C {
 
    public static void Main() {
