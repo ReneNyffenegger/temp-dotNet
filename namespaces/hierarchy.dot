@@ -96,6 +96,15 @@ digraph hierarchy {
     System_Void [ label = "Void" ];
 
 
+    System_Exception [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>Exception</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td>…</td></tr></table> > ];
+
+    System_Object -> System_Exception // }
+
+
+    System_Object -> System_Attribute; // }
 
     System_Func [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b><i>Func&lt;…&gt;</i></b></font></td></tr>
