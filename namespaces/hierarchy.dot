@@ -80,6 +80,12 @@ digraph hierarchy {
 
     System_Object -> System_Data_DataRelation // }
 
+    Microsoft_SqlServer_Server_SqlProcedureAttribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>SqlProcedureAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">Microsoft.SqlServer.Server</font></td></tr>
+       <tr><td align="text">Used by Visual Studio<br align="left"/></td></tr></table> > ];
+
+    System_Attribute -> Microsoft_SqlServer_Server_SqlProcedureAttribute // }
 
     System_DateTime [ label=< <table border="0"><tr><td align="text"><font face="Courier">DateTime</font></td></tr><tr><td>…</td></tr></table> > ];
 
