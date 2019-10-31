@@ -173,10 +173,12 @@ digraph hierarchy {
 
    System_Collections_Specialized_NameObjectCollection -> System_Net_WebHeaderCollection // }
 
-    System_Reflection_TypeInfo [ label=< <table border="0">
+    System_Reflection_TypeInfo [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>TypeInfo</b></font></td></tr>
        <tr><td><font face="Courier">System.Reflection</font></td></tr>
        <tr><td align="text">Abstract class<br align="left"/></td></tr></table> > ];
+
+    System_Type -> System_Reflection_TypeInfo; // }
 
     System_Reflection_TypeDelegator [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>TypeDelegator</b></font></td></tr>
@@ -228,7 +230,6 @@ digraph hierarchy {
 
     System_Text_BaseCodePageEncoding -> System_Text_SBSCCodePageEncoding
 
-    System_Type -> System_Reflection_TypeInfo;
     System_Type -> System_Reflection_TypeDelegator;
     System_Type -> System_Reflection_Emit_TypeBuilder;
     System_Type -> System_Reflection_Emit_GenericTypeParameterBuilderClass;
