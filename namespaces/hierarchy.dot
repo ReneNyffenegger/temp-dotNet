@@ -52,6 +52,21 @@ digraph hierarchy {
 
     System_Object -> System_Attribute; // }
 
+    System_STAThreadAttribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>STAThreadAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td align="text">Application is single-threaded apartment<br align="left"/></td></tr></table> > ];
+
+
+    System_Attribute -> System_STAThreadAttribute; // }
+
+    System_MTAThreadAttribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>MTAThreadAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System</font></td></tr>
+       <tr><td align="text">Application is multi-threaded apartment<br align="left"/></td></tr></table> > ];
+
+    System_Attribute -> System_MTAThreadAttribute; // }
+
     System_AttributeUsageAttribute [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>AttributeUsageAttribute</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System</font></td></tr>
@@ -555,6 +570,21 @@ digraph hierarchy {
 
     System_RuntimeType [ label=< <table border="0"><tr><td align="text"><font face="Courier">RuntimeType</font></td></tr><tr><td>Not documented?</td></tr></table> > ];
     System_Reflection_TypeInfo -> System_RuntimeType;
+
+
+    System_Runtime_ConstrainedExecution_CriticalFinalizerObject [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>CriticalFinalizerObject</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Runtime.ConstrainedExecution</font></td></tr>
+       <tr><td align="text">Mark finalization code in derived<br align="left"/>as critical.<br align="left"/></td></tr></table> > ];
+
+    System_Object -> System_Runtime_ConstrainedExecution_CriticalFinalizerObject // }
+
+    System_Threading_Thread[ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>Thread</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Threading</font></td></tr>
+       <tr><td align="text">Create and control a thread<br align="left"/></td></tr></table> > ];
+
+    System_Runtime_ConstrainedExecution_CriticalFinalizerObject -> System_Threading_Thread // }
 
 
     System_Object -> System_Management_Automation_PSCustomObject;
