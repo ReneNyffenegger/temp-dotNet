@@ -52,6 +52,20 @@ digraph hierarchy {
 
     System_Object -> System_Attribute; // }
 
+    System_Reflection_AssemblyKeyFileAttribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>AssemblyKeyFileAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Reflection</font></td></tr>
+       <tr><td align="text">Name of file with key pair</td></tr></table> > ];
+
+    System_Attribute -> System_Reflection_AssemblyKeyFileAttribute // }
+
+    System_Reflection_AssemblyKeyNameAttribute [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>AssemblyKeyNameAttribute</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Reflection</font></td></tr>
+       <tr><td align="text">Name of key container within CSP</td></tr></table> > ];
+
+    System_Attribute -> System_Reflection_AssemblyKeyNameAttribute // }
+
     System_STAThreadAttribute [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>STAThreadAttribute</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System</font></td></tr>
