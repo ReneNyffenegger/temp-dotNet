@@ -1,0 +1,12 @@
+{
+  "runtimeOptions": {
+    "framework": {
+    //
+    // The name apparently refers to a directory below
+    //   C:\Program Files\dotnet\shared
+    //
+      "name": "Microsoft.NETCore.App",
+      "version": "3.0.0"
+    }
+  }
+}
