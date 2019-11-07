@@ -2,6 +2,11 @@ namespace TQ84 {
 
    public class Obj {
 
+
+      //
+      // Main might be «attributed» with one of MTAThreadAttribute or STAThreadAttribute.
+      //
+
       static void Main(string[] args) {
 
       //
