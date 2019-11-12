@@ -82,3 +82,25 @@ _typeNames = s_typeNamesResurrectionTable.GetValue(
                 _ => new ConsolidatedString(_typeNames));
 
 
+*******
+
+
+private readonly object _lockObject = new object();
+
+       ...
+           
+       
+         lock (_lockObject)    {
+             if (_instanceMembers == null)
+             {
+                 _instanceMembers =
+                     s_instanceMembersResurrectionTable.GetValue(
+                        GetKeyForResurrectionTables(this),
+                        _ => new PSMemberInfoInternalCollection<PSMemberInfo>());
+      
+             }
+         }
+           
+
+********
+
