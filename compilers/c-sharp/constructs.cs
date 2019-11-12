@@ -16,6 +16,12 @@ private static T AdapterGetMemberDelegate<T>(PSObject msjObj, string name) where
 *****
 
 
+internal static PSMemberInfoInternalCollection<U> TransformMemberInfoCollection<T, U>(PSMemberInfoCollection<T> source) where T : PSMemberInfo where U : PSMemberInfo
+
+
+
+*****
+
 public PSObject()
 {
     CommonInitialization(PSCustomObject.SelfInstance);
