@@ -38,3 +38,13 @@ var objType = obj as Type ?? obj.GetType();
 
 object obj = context?.GetVariableValue(SpecialVariables.OFSVarPath);
 
+
+******
+
+
+/// Gets the object we are directly wrapping.
+///    If the ImmediateBaseObject is another PSObject,
+///    that PSObject will be returned.
+public object ImmediateBaseObject => _immediateBaseObject;
+
+
