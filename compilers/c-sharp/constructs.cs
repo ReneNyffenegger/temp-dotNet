@@ -39,6 +39,27 @@ var objType = obj as Type ?? obj.GetType();
 object obj = context?.GetVariableValue(SpecialVariables.OFSVarPath);
 
 
+**********
+
+
+
+public object BaseObject
+{
+    get
+    {
+        object returnValue;
+        PSObject mshObj = this;
+        do
+        {
+            returnValue = mshObj._immediateBaseObject;
+            mshObj = returnValue as PSObject;
+        } while (mshObj != null);
+
+        return returnValue;
+    }
+}
+
+
 ******
 
 
