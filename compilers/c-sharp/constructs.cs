@@ -26,3 +26,15 @@ public PSObject(int instanceMemberCapacity) : this()
 {
     _instanceMembers = new PSMemberInfoInternalCollection<PSMemberInfo>(instanceMemberCapacity);
 }
+
+
+******
+
+var objType = obj as Type ?? obj.GetType();
+
+
+******
+
+
+object obj = context?.GetVariableValue(SpecialVariables.OFSVarPath);
+
