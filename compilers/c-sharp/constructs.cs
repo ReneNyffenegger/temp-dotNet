@@ -75,3 +75,10 @@ public object BaseObject
 public object ImmediateBaseObject => _immediateBaseObject;
 
 
+******
+
+_typeNames = s_typeNamesResurrectionTable.GetValue(
+                GetKeyForResurrectionTables(this),
+                _ => new ConsolidatedString(_typeNames));
+
+
