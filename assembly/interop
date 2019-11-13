@@ -1,0 +1,1 @@
+Interop assemblies are wrappers that enable .NET Core to interact with COM objects using early binding.  
