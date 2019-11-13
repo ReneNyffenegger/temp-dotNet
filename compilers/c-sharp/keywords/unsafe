@@ -1,0 +1,5 @@
+The unsafe keyword denotes an unsafe context, which is required for any operation involving pointers. 
+
+unsafe requires the compiler option -unsafe
+
+For more information, see https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/unsafe-code-pointers/index
