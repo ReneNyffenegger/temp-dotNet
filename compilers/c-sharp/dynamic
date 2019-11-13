@@ -1,0 +1,18 @@
+http://joelleach.net/2018/06/06/com-interop-with-net-core-2-0/
+
+Almost 10 years ago, Microsoft introduced the dynamic keyword
+in C# 4.0, which made late binding with COM and other platforms much easier.
+   http://www.joelleach.net/2008/11/07/c-40-gets-dynamic/
+   
+   dynamic excel = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application", true));
+   excel.Visible = true;
+   Console.WriteLine("Press Enter to close Excel.");
+   Console.ReadLine();
+   excel.Quit();
+   
+The above code will function in .NET Framework, but in .NET Core 2.0, an exception occurs:
+
+‘System.__ComObject’ does not contain a definition for ‘Visible’   
+
+
+***************************************************************************
