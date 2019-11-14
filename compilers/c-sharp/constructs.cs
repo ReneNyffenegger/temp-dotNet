@@ -102,7 +102,9 @@ private readonly object _lockObject = new object();
          }
            
 
-********
+********  Arrays
+
+     ( Don't use an array.  They are the harbingers of bad programming habits.  Use List<> instead. )
 
    Array initialization
      C# 4: section 7.6.10.4 "Array Creation Expressions".
@@ -183,8 +185,15 @@ private readonly object _lockObject = new object();
       int[] array = Expression.Lambda<Func<int[]>>(expr).Compile()(); // compile and call callback
 
 
+      // ---------------
+      
+          What does the keyword params do:
+      
+               public virtual int Add (params object[] values);
 
 ******* 
+
+     for(int i = ...) with one statement does not require curly braces.
 
 
       int n = Convert.ToInt16(Console.ReadLine());
