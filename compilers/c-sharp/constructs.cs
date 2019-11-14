@@ -185,6 +185,11 @@ private readonly object _lockObject = new object();
       int[] array = Expression.Lambda<Func<int[]>>(expr).Compile()(); // compile and call callback
 
 
+      // ---------------
+      
+          What does the keyword params do:
+      
+               public virtual int Add (params object[] values);
 
 ******* 
 
