@@ -326,12 +326,19 @@ digraph hierarchy {
 
     System_ComponentModel_MarshalByValueComponent-> System_Data_DataSet;
 
-    System_Management_Automation_PSObject [ label=< <table border="0">
+    System_Management_Automation_PSObject [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>PSObject</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
        <tr><td>…</td></tr></table> > ];
 
-    System_Object -> System_Management_Automation_PSObject;
+    System_Object -> System_Management_Automation_PSObject; // }
+
+    System_Management_Automation_InformationalRecord [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>InformationalRecord</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+       <tr><td align="text">Base class for items<br align="left"/>in <font face="Courier">PSInformationalBuffers<br align="left"/></font></td></tr></table> > ];
+
+    System_Object -> System_Management_Automation_InformationalRecord; // }
 
     System_Management_Automation_PSVariable [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>PSVariable</b></font></td></tr>
