@@ -102,6 +102,20 @@ digraph hierarchy {
 
     System_Object -> System_ComponentModel_MarshalByValueComponent // }
 
+    System_Data_Common_DataAdapter [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>DataAdapter</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
+       <tr><td align="text">Bridge to <font face="Courier">System.Data.DataSet</font><br align="left"/></td></tr></table> > ];
+
+    System_MarshalByRefObject -> System_Data_Common_DataAdapter // }
+
+    System_Data_Common_DbDataAdapter [ label=< <table border="0"> // {
+       <tr><td align="text"><font face="Courier"><b>Db.DataAdapter</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
+       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+
+    System_Data_Common_DataAdapter -> System_Data_Common_DbDataAdapter // }
+
     System_Data_DataRelation [ label=< <table border="0"> // {
        <tr><td align="text"><font face="Courier"><b>DataRelation</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
