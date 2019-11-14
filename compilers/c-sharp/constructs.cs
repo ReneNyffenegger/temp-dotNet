@@ -184,6 +184,11 @@ private readonly object _lockObject = new object();
 
       int[] array = Expression.Lambda<Func<int[]>>(expr).Compile()(); // compile and call callback
 
+      // --------------- foreach      
+      
+              string[] MyString = { " Friday, April 10, 2009", "Friday, April 10, 2009" };
+              foreach (string dateString in MyString)
+
 
       // ---------------
       
