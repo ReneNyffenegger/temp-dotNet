@@ -102,7 +102,9 @@ private readonly object _lockObject = new object();
          }
            
 
-********
+********  Arrays
+
+     ( Don't use an array.  They are the harbingers of bad programming habits.  Use List<> instead. )
 
    Array initialization
      C# 4: section 7.6.10.4 "Array Creation Expressions".
