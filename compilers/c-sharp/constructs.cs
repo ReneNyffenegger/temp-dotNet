@@ -186,5 +186,7 @@ private readonly object _lockObject = new object();
 
 ******* 
 
+     for(int i = ...) with one statement does not require curly braces.
+
 
       int n = Convert.ToInt16(Console.ReadLine());
