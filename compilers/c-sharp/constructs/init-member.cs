@@ -1,8 +1,13 @@
 using System;
+using System.Collections.Generic;
 
 class Cls {
    public int    num;
    public string txt;
+
+   public print() {
+      Console.WriteLine("num = {0}, txt = {1}", num, txt);
+   }
 }
 
 class Prg {
@@ -11,7 +16,19 @@ class Prg {
   
       Cls obj = new Cls() { num = 42, txt = "Hello World" };
 
-      Console.WriteLine("num = {0}, txt = {1}", obj.num, obj.txt);
+//    Console.WriteLine("num = {0}, txt = {1}", obj.num, obj.txt);
+      obj.print();
+
+      List<Cls> lst = new List<Cls>() {
+
+         new Cls() { num = 1, txt = "one" },
+         new Cls() { num = 2, txt = "two" },
+
+      }
+
+      for (elem in lst) {
+         elem.print();
+      }
 
    }
 
