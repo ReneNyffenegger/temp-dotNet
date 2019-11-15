@@ -1,11 +1,16 @@
 using System;
+using System.Collections.Generic;
+
 class Prg {
 
    static void Main() {
 
-      string[] ary = new {"foo", "bar", "baz"};
+      string[] ary = new string[]{"foo", "bar", "baz"};
 
-      foreach (string elem in ary) { // error CS0746: Invalid anonymous type member declarator. Anonymous type members must be declared with a member assignment, simple name or member access.
+      foreach (string elem in ary) {
+         Console.WriteLine(elem);
+      }
+      foreach (string elem in new List<string>(ary)) {
          Console.WriteLine(elem);
       }
 
