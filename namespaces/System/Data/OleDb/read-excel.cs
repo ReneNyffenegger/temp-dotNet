@@ -28,11 +28,15 @@ class Program {
 
 
 //      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'";
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;";
+//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'";
+//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;";                             //                        !! Unrecognized database format 'C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx'
 //      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml";
 // .    string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml;HDR=Yes";
-        string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx"
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx";
+//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx";               //                        !! Does not work!
+//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;HDR=Yes";       //                        !! Does not work!
+//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml;HDR=Yes";       //                           OK
+//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx";       //                           OK
+//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml"        ;       //                        !! Format of the initialization string does not conform to specification starting at index 121.
 //      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;foobarbaz=1";
 //      string connectionString =          @"Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'";
 
