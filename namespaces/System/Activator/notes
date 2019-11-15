@@ -1,0 +1,7 @@
+# 
+# Somewhere on stackoverflow
+#
+  Type elementType = Type.GetType("Customer");
+  Type listType = typeof(List<>).MakeGenericType(new Type[] { elementType });
+  
+  object list = Activator.CreateInstance(listType);
