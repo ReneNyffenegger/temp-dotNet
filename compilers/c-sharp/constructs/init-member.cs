@@ -5,7 +5,7 @@ class Cls {
    public int    num;
    public string txt;
 
-   public print() {
+   public void print() {
       Console.WriteLine("num = {0}, txt = {1}", num, txt);
    }
 }
@@ -24,9 +24,9 @@ class Prg {
          new Cls() { num = 1, txt = "one" },
          new Cls() { num = 2, txt = "two" },
 
-      }
+      };
 
-      for (elem in lst) {
+      foreach (Cls elem in lst) {
          elem.print();
       }
 
