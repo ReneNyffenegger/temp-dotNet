@@ -122,6 +122,11 @@ private readonly object _lockObject = new object();
 
       // ---------------
 
+        int[] fib = {1,1,2,3,5,8,13};
+
+
+      // ---------------
+
       var contacts = new[]
       {
           new {
