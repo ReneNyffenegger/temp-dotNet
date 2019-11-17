@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.Common;
 // using System.Reflection;
 using MySql.Data.MySqlClient;
@@ -29,11 +30,17 @@ class Prg {
    }
 
    static void Main() {
-      IDbConnection con_1 = new OracleConnection("User Id=rene;Password=rene;Data Source=ORA18");
-      IDbConnection con_2 = new MySqlConnection ("Database=tq84_db;Data Source=OMIS-NC-08;User Id=rene;Password=rene;old guids=true");
+      IDbConnection con_1   = new OracleConnection(@"User Id=rene;Password=rene;Data Source=ORA18");
+      IDbConnection con_2   = new MySqlConnection (@"Database=tq84_db;Data Source=OMIS-NC-08;User Id=rene;Password=rene;old guids=true");
+//    IDbConnection con_3   = new OleDbConnection (@"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\DbCommand\excel.xlsx");
+      OleDbConnection con_3 = new OleDbConnection (@"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\DbCommand\excel.xlsx");
+      OleDbCommand command = new OleDbCommand("create table [foobar$] (col1 integer, col2 integer)", con_3);
+      con_3.Open();
+      command.ExecuteNonQuery();
 
-      executeCommands(con_1);
-      executeCommands(con_2);
+//    executeCommands(con_1);
+//    executeCommands(con_2);
+      executeCommands(con_3);
 
 
    }
