@@ -23,3 +23,7 @@ To use the standard query operators,
      -  and so on.
 
    You can see these additional methods in IntelliSense statement completion when you type "dot" after an instance of an IEnumerable<T> type such as List<T> or Array.
+
+--
+
+  You can use extension methods to extend a class or interface, but not to override them. An extension method with the same name and signature as an interface or class method will never be called. 
