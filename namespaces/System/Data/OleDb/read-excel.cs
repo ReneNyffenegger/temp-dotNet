@@ -21,42 +21,57 @@ insert into tq84_ex values (  8,  8.8 , 'eight');
 using System;
 using System.Data;
 using System.Data.OleDb;
+using System.IO;
 
 class Program {
 
     static void Main() {
 
        string[] connectionStrings = new string[] {
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'",
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml'"        ,
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;",                             //                        !! Unrecognized database format 'C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx'
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml",
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml;HDR=Yes",
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx",               //                        !! Does not work!
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;HDR=Yes",       //                        !! Does not work!
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml;HDR=Yes",       //                           OK
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx",       //                           OK
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml"        ,       //                        !! Format of the initialization string does not conform to specification starting at index 121.
-          @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;foobarbaz=1",
-                   @"Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'",
+                                            @"Data Source=XLSXPATH",
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH",
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH;",                             //                        !! Unrecognized database format 'XLSXPATH'
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH;Extended Properties='Excel 12.0 Xml;HDR=Yes'",
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH;Extended Properties='Excel 12.0 Xml;IMEX=Yes'",
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH;Extended Properties='Excel 12.0 Xml'"        ,
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH;Excel 12.0 Xml",
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH;Excel 12.0 Xml;HDR=Yes",
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=XLSXPATH",               //                        !! Does not work!
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=XLSXPATH;HDR=Yes",       //                        !! Does not work!
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH;Excel 12.0 Xml;HDR=Yes",       //                           OK
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=XLSXPATH",       //                           OK
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH;Excel 12.0 Xml"        ,       //                        !! Format of the initialization string does not conform to specification starting at index 121.
+          @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=XLSXPATH;foobarbaz=1",
+                   @"Microsoft.ACE.OLEDB.12.0;Data Source=XLSXPATH;Extended Properties='Excel 12.0 Xml;HDR=Yes'",
+                   @"complete-crap",
+      };
 
-       };
+//     string[] connectionStrings = new string[] {
+//                                          @"Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx",
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx",
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'",
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml'"        ,
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;",                             //                        !! Unrecognized database format 'C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx'
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml",
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml;HDR=Yes",
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx",               //                        !! Does not work!
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;HDR=Yes",       //                        !! Does not work!
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml;HDR=Yes",       //                           OK
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx",       //                           OK
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml"        ,       //                        !! Format of the initialization string does not conform to specification starting at index 121.
+//        @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;foobarbaz=1",
+//                 @"Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'",
+
+//     };
 
 
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'";
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'";
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;";                             //                        !! Unrecognized database format 'C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx'
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml";
-// .    string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml;HDR=Yes";
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx";               //                        !! Does not work!
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;HDR=Yes";       //                        !! Does not work!
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml;HDR=Yes";       //                           OK
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx";       //                           OK
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Excel 12.0 Xml"        ;       //                        !! Format of the initialization string does not conform to specification starting at index 121.
-//      string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Excel 12.0 Xml;HDR=Yes;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;foobarbaz=1";
-//      string connectionString =          @"Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx;Extended Properties='Excel 12.0 Xml;HDR=Yes'";
+        string xlsxPath = Directory.GetCurrentDirectory() + @"\" + "db.xlsx";
 
-        foreach (string connectionString in connectionStrings) {
+
+        foreach (string connectionStringTemplate in connectionStrings) {
+
+//         string connectionString = connectionStringTemplate.Replace("XLSXPATH", @"C:\Users\OMIS.Rene\github\temp\dotNet\namespaces\System\Data\OleDb\db.xlsx");
+           string connectionString = connectionStringTemplate.Replace("XLSXPATH", xlsxPath);
            Console.WriteLine(connectionString);
 
         // Provide the query string with a parameter placeholder.
@@ -72,9 +87,12 @@ class Program {
         // when the code exits.
 
            try {
+
               using (OleDbConnection connection = new OleDbConnection(connectionString)) {
                // Create the Command and Parameter objects.
+                  Console.WriteLine("  OK create connection");
                   OleDbCommand command = new OleDbCommand(queryString, connection);
+                  Console.WriteLine("  OK create command ");
                   command.Parameters.AddWithValue("@id_p", paramValue);
 
                   // Open the connection in a try/catch block. 
@@ -84,17 +102,15 @@ class Program {
                       connection.Open();
                       OleDbDataReader reader = command.ExecuteReader();
                       while (reader.Read()) {
-// !!!                    Console.WriteLine("\t{0}\t{1}\t{2}", reader[0], reader[1], reader[2]);
+//!                       Console.WriteLine("\t{0}\t{1}\t{2}", reader[0], reader[1], reader[2]);
                       }
                       reader.Close();
 //                }
 //                catch (Exception ex) {
 //                    Console.WriteLine(ex.Message);
 //                }
+                 Console.WriteLine("  OK test");
               }
-           }
-           finally {
-              Console.WriteLine("  OK.");
            }
            catch (System.ArgumentException argEx) {
               Console.WriteLine($"  NOK: ArgumentException: {argEx.Message}");
@@ -102,6 +118,8 @@ class Program {
            catch (System.Data.OleDb.OleDbException oleDbEx) {
               Console.WriteLine($"  NOK: OleDbException: {oleDbEx.Message}");
            }
+
+           Console.WriteLine("");
            
         }
     }
