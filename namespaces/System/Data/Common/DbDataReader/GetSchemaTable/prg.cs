@@ -38,6 +38,18 @@ class Prg {
 
       DataTable    schema = reader.GetSchemaTable();
 
+//    DataTableReader schemeaReader = new DataTableReader(schema);
+
+      foreach (DataRow row in schema.Rows) {
+
+            foreach (DataColumn column in schema.Columns) {
+                Console.WriteLine(String.Format("{0} = {1} ({2})",
+                   column.ColumnName, row[column], row[column].GetType().FullName));
+            }
+            Console.WriteLine("---");
+        }
+
+
 //
 //       With an OleDbCommand, the ExecuteReader method returns
 //       a DbDataReader object:
