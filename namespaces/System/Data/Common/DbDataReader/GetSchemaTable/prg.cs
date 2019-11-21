@@ -6,6 +6,18 @@ using System.IO;
 
 class Prg {
 
+
+   private static void showSchema(DataTable schema) {
+      foreach (DataRow row in schema.Rows) {
+            foreach (DataColumn column in schema.Columns) {
+                Console.WriteLine(String.Format("{0} = {1} ({2})",
+                   column.ColumnName, row[column], row[column].GetType().FullName));
+            }
+            Console.WriteLine("---");
+      }
+
+   }
+
    static void Main () {
 
       string csvFilePath = Directory.GetCurrentDirectory();
@@ -32,23 +44,15 @@ class Prg {
 //    OleDbCommand command = new OleDbCommand("select id, num, txt from data.csv", connection);
 
 
-   
-
       DbDataReader reader = command.ExecuteReader();
-
       DataTable    schema = reader.GetSchemaTable();
 
 //    DataTableReader schemeaReader = new DataTableReader(schema);
 
-      foreach (DataRow row in schema.Rows) {
+      showSchema(schema);
 
-            foreach (DataColumn column in schema.Columns) {
-                Console.WriteLine(String.Format("{0} = {1} ({2})",
-                   column.ColumnName, row[column], row[column].GetType().FullName));
-            }
-            Console.WriteLine("---");
-        }
-
+      DataTableReader dtReader = schema.CreateDataReader();
+      showSchema(dtReader.GetSchemaTable());
 
 //
 //       With an OleDbCommand, the ExecuteReader method returns
