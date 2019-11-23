@@ -5,7 +5,12 @@ class Prg {
    private int x;
    public Prg(int x_) { x = x_; }
 
-   public string gnirtSoT(int i) => (x-i).ToString();
+   public string subtract(int i) => (x-i).ToString();
+
+// public int Mult(int i) => {
+//   var bla = i * 2;
+//   return i * x;
+// }
 
    static void Main () {
 
@@ -14,8 +19,9 @@ class Prg {
       Prg p_1000 = new Prg(1000);
       Prg p_9999 = new Prg(9999);
 
-      Console.WriteLine(p_1000.gnirtSoT( 200));
-      Console.WriteLine(p_9999.gnirtSoT(3333));
+      Console.WriteLine(p_1000.subtract( 200));
+      Console.WriteLine(p_9999.subtract(3333));
+//    Console.WriteLine(p_1000.Mult    (3));
 
    }
 }
