@@ -14,9 +14,7 @@ class Prg {
       Console.WriteLine(String.Join(" - ", res));
    }
 
-// ----------------------------------------
-//
-//     https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/working-with-linq
+// ---------------------------------------- {  https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/working-with-linq
 
    static IEnumerable<string> Suits() {
      yield return "clubs"; yield return "diamonds"; yield return "hearts"; yield return "spades";
@@ -45,12 +43,34 @@ class Prg {
       Console.WriteLine(String.Join(" - ", startingDeck));
    }
 
+// ---------------------------------------- }
+
+
+   static void min() {
+
+     string[] words = { "bot", "apple", "apricot" };
+
+     int minimalLength = words
+       .Where(w => w.StartsWith("a"))
+       .Min  (w => w.Length
+     );
+
+     Console.WriteLine(minimalLength);   // output: 5
+
+
+//   dynamic L = w => w.Length;
+
+   }
+   
 
    static void Main () {
 
       q();
+
 //    p();
-      p_alternative();
+//    p_alternative();
+
+      min();
 
    }
 
