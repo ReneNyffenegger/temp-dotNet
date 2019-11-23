@@ -62,6 +62,13 @@ class Prg {
 
    }
    
+   static void aggregate() {
+
+     string[] words = { "foo", "BAR", "baz"};
+     string aggregatged = words.Aggregate("init", (string interim, string next) => "(" + interim + "+" + next + ")");
+     Console.WriteLine(aggregatged);   // output: 280
+
+   }
 
    static void Main () {
 
@@ -71,6 +78,8 @@ class Prg {
 //    p_alternative();
 
       min();
+
+      aggregate();
 
    }
 
