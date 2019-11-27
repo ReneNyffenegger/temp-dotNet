@@ -14,12 +14,18 @@ if (test-path $zipFile) {
 
 
 $srcDir = resolve-path .
+
+echo "srcDir = $srcDir"
+
 write-output "Trying to create $zipFile in directory $srcDir"
-[System.IO.Compression.ZipFile]::CreateFromDirectory($srcDir, $zipFile)
+  [System.IO.Compression.ZipFile]::CreateFromDirectory($srcDir, $zipFile)
+# [System.IO.Compression.ZipFile]::CreateFromDirectory('./'   , $zipFile)
 
 
 if (test-path "$srcDir\new-directory") {
-  remove-item "$srcDir\new-directory"
+  remove-item "$srcDir\new-directory" -recurse
 }
-mkdir '.\new-directory'
-[System.IO.Compression.ZipFile]::ExtractToDirectory("$srcDir\new-directory", $zipFile)
+
+# mkdir "$srcDir\new-directory"
+write-output "Trying to extract $zipFile to $srcDir\new-directory"
+[System.IO.Compression.ZipFile]::ExtractToDirectory($zipFile, "$srcDir\new-directory")
