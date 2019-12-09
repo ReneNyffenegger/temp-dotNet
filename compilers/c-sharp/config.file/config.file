@@ -1,0 +1,8 @@
+<!--
+      https://stackoverflow.com/a/14653021/180275
+-->
+<configuration>
+  <oracle.dataaccess.client> 
+    <add key="DllPath" value="c:\oracle\product\1.1.0-xcopy-dep\BIN"/>
+  </oracle.dataaccess.client>
+</configuration>
