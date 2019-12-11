@@ -11,6 +11,10 @@ static class Prg {
       ora.Open();
 
       OracleCommand  sql;
+
+   //
+   // This is supposed to test if the same variable can be used multiple times to create a reade from it.
+   // Apparently, it can.
       sql = new OracleCommand("select    2  n from dual union all select      3  n from dual union all select    1  n from dual", ora); OracleDataReader rdr_1 = sql.ExecuteReader();
       sql = new OracleCommand("select 'two' t from dual union all select 'three' t from dual union all select 'one' t from dual", ora); OracleDataReader rdr_2 = sql.ExecuteReader();
 
