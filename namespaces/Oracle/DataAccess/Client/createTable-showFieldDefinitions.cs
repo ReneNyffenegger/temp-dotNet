@@ -1,5 +1,5 @@
 // set ORACLE_HOME=c:\oracle\18c
-// csc -debug -reference:%oracle_home%\ODP.NET\bin\4\Oracle.DataAccess.dll  error.cs
+// csc -debug -reference:%oracle_home%\ODP.NET\bin\4\Oracle.DataAccess.dll  createTable-showFieldDefinitions.cs
 
 using System;
 using Oracle.DataAccess.Client;
