@@ -1,0 +1,19 @@
+﻿<!--
+
+  Add xmlns to Project to prevent
+     Unhandled Exception: Microsoft.Build.Exceptions.InvalidProjectFileException:
+     The default XML namespace of the project must be the MSBuild XML namespace.
+
+-->
+<Project
+  xmlns = "http://schemas.microsoft.com/developer/msbuild/2003"
+  Sdk   = "Microsoft.NET.Sdk.WindowsDesktop"
+>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+</Project>
