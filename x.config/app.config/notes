@@ -1,0 +1,14 @@
+
+{ Azure Storage Emulator
+
+  https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator#storage-emulator-command-line-tool-reference :
+  The easiest way to connect to the storage emulator from your application is
+  to configure a connection string in your application's configuration file
+  that references the shortcut UseDevelopmentStorage=true. Here's an example of
+  a connection string to the storage emulator in an app.config file:
+
+  <appSettings>
+    <add key="StorageConnectionString" value="UseDevelopmentStorage=true" />
+  </appSettings>
+
+}
