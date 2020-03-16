@@ -3,6 +3,7 @@
 #
 
 $null = [System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.Management.SqlParser')
+# [System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.Management.SqlParser.SqlCodeDom')
 
 [Microsoft.SqlServer.Management.SqlParser.Parser.ParseResult] $rst = [Microsoft.SqlServer.Management.SqlParser.Parser.Parser]::Parse( { statements.sql });
 
@@ -12,10 +13,10 @@ $null = [System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.M
 # [Microsoft.SqlServer.Management.SqlParser.Parser.ParseResult]::GetProperty("Script", [System.Reflection.BindingFlags]::NonPublic -or [System.Reflection.BindingFlags]::Instance).GetValue($rst);
 
 #[Microsoft.SqlServer.Management.SqlParser.SqlCodeDom.SqlScript]
+#$script = $rst.Script
 $script = $rst.GetType().GetProperty("Script", 
-#   ( [System.Reflection.BindingFlags]::NonPublic -or [System.Reflection.BindingFlags]::Instance ) -as [System.Reflection.BindingFlags]
       [System.Reflection.BindingFlags]::NonPublic  +  [System.Reflection.BindingFlags]::Instance 
-    ).GetValue($rst);
+   ).GetValue($rst);
 
 # $script.GetType().FullName
 
