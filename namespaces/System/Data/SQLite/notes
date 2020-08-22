@@ -1,1 +1,12 @@
 https://github.com/gtworek/PSBits/blob/master/Misc/DumpChromePasswords.ps1
+
+
+There is a 32 and a 64 bit version
+  https://system.data.sqlite.org/downloads/1.0.113.0/sqlite-netFx40-binary-bundle-Win32-2010-1.0.113.0.zip
+
+    --> Extract 
+          SQLite.Interop.dll
+          System.Data.SQLite.dll
+
+
+
