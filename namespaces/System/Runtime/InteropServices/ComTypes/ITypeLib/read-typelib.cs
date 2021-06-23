@@ -9,8 +9,9 @@ public class TypeLibTest {
  
   [DllImport("oleaut32.dll", CharSet = CharSet.Unicode, ExactSpelling = true, PreserveSig = false)]
    private static extern IntPtr LoadTypeLib(
-          string fileName,
-      out System.Runtime.InteropServices.ComTypes.ITypeLib typeLib);
+      string fileName,
+      out System.Runtime.InteropServices.ComTypes.ITypeLib typeLib
+   );
  
    public static void Main(string[] args) {
  
