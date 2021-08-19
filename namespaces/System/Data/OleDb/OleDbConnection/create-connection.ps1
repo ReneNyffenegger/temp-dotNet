@@ -3,4 +3,3 @@
 
   $oleDbConn = new-object System.Data.OleDb.OleDbConnection "Provider=OraOLEDB.Oracle;User Id=rene;Password=rene;Data Source=ORA19"
   $oleDbConn.Open()
-
