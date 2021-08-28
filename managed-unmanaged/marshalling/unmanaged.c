@@ -6,12 +6,19 @@
 
 #include <windows.h>
 
-__declspec(dllexport) int passStringA(char* txt) {
-    MessageBoxA(0, txt, "passStringA", 0);
+__declspec(dllexport) int StrA(char* txt) {
+    MessageBoxA(0, txt, "StrA", 0);
     return 42;
 }
 
-__declspec(dllexport) int passStringW(wchar_t* txt) {
-    MessageBoxW(0, txt, L"passStringW", 0);
+__declspec(dllexport) int StrW(wchar_t* txt) {
+    MessageBoxW(0, txt, L"StrW", 0);
     return 99;
+}
+
+__declspec(dllexport) void PtrDWord(DWORD* num) {
+    char buf[20];
+    _itoa(*num, buf, 10);
+    MessageBoxA(0, buf, "PtrDWord", 0);
+    *num = 42;
 }
