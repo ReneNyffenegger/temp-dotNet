@@ -9,9 +9,10 @@ if (-not ( $pwd -in ($env:path -split ';') )) {
 
 add-type -typeDefinition ( get-content -raw "$psScriptRoot/managed.cs" )
 
-$ret = [INTF_Unicode]::Str("Unicode") # Calls StrW
-$ret = [INTF_Ansi   ]::Str("Ansi"   ) # Calls StrA
-$ret = [INTF_Auto   ]::Str("Auto"   ) # Calls StrW
+$outString = new-object System.text.StringBuilder 100
+$ret = [INTF_Unicode]::Str("Unicode", $outString); write-host "ret = $ret, outString = $($outString.toString())" # Calls StrW
+$ret = [INTF_Ansi   ]::Str("Ansi"   , $outString); write-host "ret = $ret, outString = $($outString.toString())" # Calls StrA
+$ret = [INTF_Auto   ]::Str("Auto"   , $outString); write-host "ret = $ret, outString = $($outString.toString())" # Calls StrW
 
 [UInt32] $num = 99
 [INTF_PtrDword]::PtrDWord([ref] $num)
