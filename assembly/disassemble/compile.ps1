@@ -4,5 +4,5 @@ csc -nologo -reference:cls.dll   simple.cs
 ildasm cls.dll     -out:cls.il
 ildasm simple.exe  -out:simple.il
 
-ilasm cls.il
-ilasm simple.il
+ilasm -dll cls.il
+ilasm      simple.il
