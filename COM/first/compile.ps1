@@ -5,3 +5,5 @@
 # run as admin:
 #   BUT See also https://stackoverflow.com/questions/37193356/registering-net-com-dlls-without-admin-rights-regasm
 reg import ComClassExample.reg
+
+# regasm -verbose -codebase -unregister ComClassExample.dll # Create ComClassExample.reg

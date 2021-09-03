@@ -2,14 +2,13 @@ using System.Runtime.InteropServices;
 
 [assembly: ComVisible(true)]
 
-
 namespace tq84 {
 
    //
    //  By default, an interface is enabled for both early and late-binding.
    //  Using the InterfaceType attribute, we define the interface to be late-binding only (InterfaceIsIDispatch)
    //
-  [Guid("11234567-89ab-cdef-0123-456789abcdef"),
+  [ /* Guid("11234567-89ab-cdef-0123-456789abcdef") , */
    InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
    public interface IComClassExample {
       [DispId(1)]
