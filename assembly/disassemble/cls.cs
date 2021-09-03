@@ -1,13 +1,20 @@
+//
+//  csc -target:library cls.cs -out
+//
+
+using System;
+using System.Runtime.InteropServices;
+
 namespace nsDll {
-   class cls {
+   public class cls {
 
       private String txt;
 
-      public cls(t string) {
+      public cls(string t) {
          txt = t;
       }
 
-    [DllImport("User32.dll", EntryPoint = "MessageBox" /*, CharSet = CharSet.Auto) */]
+   [DllImport("User32.dll", EntryPoint = "MessageBox" /*, CharSet = CharSet.Auto */ )]
     internal static extern int msgBox(
         IntPtr hWnd,
         string lpText,
@@ -15,8 +22,8 @@ namespace nsDll {
         uint   uType
      );
 
-      public msg() {
-         msgBox(0, txt, "msgBox", 0);
+      public void msg() {
+         msgBox(IntPtr.Zero, txt, "msgBox", 0);
       }
    }
 }
