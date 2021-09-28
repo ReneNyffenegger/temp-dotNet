@@ -17,3 +17,6 @@ $ret = [INTF_Auto   ]::Str("Auto"   , $outString); write-host "ret = $ret, outSt
 [UInt32] $num = 99
 [INTF_PtrDword]::PtrDWord([ref] $num)
 "num = $num"
+
+[INTF_CallBack]::callCallback( { param ( [int]$a, [int]$b) return $a * $b },  4, 3)
+[INTF_CallBack]::callCallback( { param ( [int]$a, [int]$b) return $a + $b },  4, 3)

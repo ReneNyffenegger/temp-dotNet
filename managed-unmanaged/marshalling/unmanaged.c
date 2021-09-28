@@ -20,7 +20,12 @@ __declspec(dllexport) int StrW(const wchar_t* txt_in, wchar_t* txt_out) {
 
 __declspec(dllexport) void PtrDWord(DWORD* num) {
     char buf[20];
-    _itoa(*num, buf, 10);
+   _itoa(*num, buf, 10);
     MessageBoxA(0, buf, "PtrDWord", 0);
-    *num = 42;
+   *num = 42;
+}
+
+typedef int (WINAPI *callback_t)(int, int);
+__declspec(dllexport) int callCallback(callback_t callback, int a, int b) {
+   return callback(a, b);
 }
