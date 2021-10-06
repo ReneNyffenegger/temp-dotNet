@@ -1,0 +1,7 @@
+digraph {
+
+   Encoding             -> EncodingNLS
+   EncodingNLS          -> BaseCodePageEncoding
+   BaseCodePageEncoding -> SBCSCodePageEncoding
+
+}
