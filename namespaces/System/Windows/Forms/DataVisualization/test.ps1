@@ -1,3 +1,7 @@
+#
+#  https://learn-powershell.net/2016/09/18/building-a-chart-using-powershell-and-chart-controls/
+#
+
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Windows.Forms.DataVisualization
 
@@ -46,8 +50,9 @@ $Chart.Series['Series1'].Label = "#VALX (#VALY)"
 
 #region Windows Form to Display Chart
 $AnchorAll = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Right -bor [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Left
-$Form = New-Object Windows.Forms.Form
-$Form.Width = 740
+
+$Form        = New-Object Windows.Forms.Form
+$Form.Width  = 740
 $Form.Height = 490
 $Form.controls.add($Chart)
 $Chart.Anchor = $AnchorAll
@@ -65,6 +70,13 @@ $SaveButton.add_click({
         $Chart.SaveImage($Result.FileName, $Result.Extension)
     }
 })
+
+if ($true) {
+
+   $ChartArea.Area3DStyle.Enable3D=$True
+   $ChartArea.Area3DStyle.Inclination = 50
+
+}
  
 $Form.controls.add($SaveButton)
 $Form.Add_Shown({$Form.Activate()})
