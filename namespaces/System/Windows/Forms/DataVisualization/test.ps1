@@ -2,13 +2,14 @@
 #  https://learn-powershell.net/2016/09/18/building-a-chart-using-powershell-and-chart-controls/
 #
 
-Add-Type -AssemblyName System.Windows.Forms
-Add-Type -AssemblyName System.Windows.Forms.DataVisualization
+add-type -assemblyName System.Windows.Forms
+add-type -assemblyName System.Windows.Forms.DataVisualization
 
 
-$Chart      = New-object System.Windows.Forms.DataVisualization.Charting.Chart
+$Chart      = new-object System.Windows.Forms.DataVisualization.Charting.Chart
 $ChartArea  = New-Object System.Windows.Forms.DataVisualization.Charting.ChartArea
-$Series     = New-Object -TypeName System.Windows.Forms.DataVisualization.Charting.Series
+$Series     = New-Object System.Windows.Forms.DataVisualization.Charting.Series
+
 $ChartTypes = [System.Windows.Forms.DataVisualization.Charting.SeriesChartType]
 
 $Series.ChartType = $ChartTypes::Pie
