@@ -1,3 +1,7 @@
+#
+#  https://renenyffenegger.ch/notes/Microsoft/dot-net/namespaces-classes/System/Windows/Forms/DataVisualization/Charting/index
+#  https://github.com/ReneNyffenegger/.NET-API/blob/master/System/Windows/Forms/DataVisualization/Charting/_examples/line-point.ps1
+#
 add-type -assemblyName System.Windows.Forms
 add-type -assemblyName System.Windows.Forms.DataVisualization
 
