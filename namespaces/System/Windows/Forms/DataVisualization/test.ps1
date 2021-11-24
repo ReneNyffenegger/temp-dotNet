@@ -5,12 +5,11 @@
 add-type -assemblyName System.Windows.Forms
 add-type -assemblyName System.Windows.Forms.DataVisualization
 
+$chart            =  new-object System.Windows.Forms.DataVisualization.Charting.Chart
+$chartArea        =  new-Object System.Windows.Forms.DataVisualization.Charting.ChartArea
 
-$Chart      = new-object System.Windows.Forms.DataVisualization.Charting.Chart
-$ChartArea  = New-Object System.Windows.Forms.DataVisualization.Charting.ChartArea
-
-$Series     = New-Object System.Windows.Forms.DataVisualization.Charting.Series
-$Series.ChartType = [System.Windows.Forms.DataVisualization.Charting.SeriesChartType]::Pie
+$series           =  new-object System.Windows.Forms.DataVisualization.Charting.Series
+$series.ChartType = [System.Windows.Forms.DataVisualization.Charting.SeriesChartType]::Pie
 
 $Chart.Series.Add($Series)
 $Chart.ChartAreas.Add($ChartArea)
