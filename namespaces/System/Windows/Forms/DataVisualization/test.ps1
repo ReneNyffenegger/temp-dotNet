@@ -47,6 +47,9 @@ $Chart.Series['Series1'].Label            = "#VALX (#VALY)"
 
 
 
+#
+#  Resize controls with form:
+#
 $AnchorAll = [System.Windows.Forms.AnchorStyles]::Bottom -bor [System.Windows.Forms.AnchorStyles]::Right -bor [System.Windows.Forms.AnchorStyles]::Top -bor [System.Windows.Forms.AnchorStyles]::Left
 
 $Form        = New-Object Windows.Forms.Form
