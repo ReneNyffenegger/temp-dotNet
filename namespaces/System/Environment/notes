@@ -19,8 +19,6 @@ PowerShell
 [System.Environment]::Version
 [System.Environment]::WorkingSet
 [System.Environment]::StackTrace
-[System.Environment]::Is64BitProcess
-[System.Environment]::Is64BitOperatingSystem
 [System.Environment]::HasShutdownStarted
 [System.Environment]::UserName
 [System.Environment]::UserInteractive
