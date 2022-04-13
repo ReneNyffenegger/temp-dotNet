@@ -1,6 +1,5 @@
 //
-//    csc                                                                                                         writeBlobToFile.cs
-//    csc -r:C:\Windows\Microsoft.NET\assembly\GAC_MSIL\MySql.Data\v4.0_8.0.18.0__c5687fc88969c44d\MySql.Data.dll writeBlobToFile.cs
+//    csc writeBlobToFile.cs
 //
 //    Comapre
 //        C:\Users\Rene\github\.NET-API\MySql\Data\MySqlClient\writeBlobToFile.cs
@@ -17,7 +16,7 @@ class Prg {
       SqlConnection conn = new SqlConnection("Database=tq84_db;Server=.;trusted_connection=true");
       conn.Open();
 
-      SqlCommand      sql = new SqlCommand("select filename, image from migtable_blob", conn);
+      SqlCommand      sql = new SqlCommand("select filename, image from tableWithBlob", conn);
       sql.CommandType     = CommandType.Text;
       SqlDataReader   rdr = sql.ExecuteReader();
 
