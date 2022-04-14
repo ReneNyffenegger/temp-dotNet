@@ -11,7 +11,7 @@ static class ORA_00911 {
         cmd.ExecuteNonQuery();
    }
    catch (Exception ex) {
-        Console.WriteLine($"Statement {stmt} threw {ex.ToString()}");
+        Console.WriteLine($"Statement {stmt} threw {ex.Message}");
    }
    }
 
@@ -22,8 +22,8 @@ static class ORA_00911 {
         conn.Open();
         System.Data.Common.DbTransaction trx = conn.BeginTransaction();
 
-        execStatement(conn, "insert into ora_00911_test(id, text          ) values (1, 'one'           )");
-        execStatement(conn, "insert into ora_00911_test(filename, id, text) values ('xyz.txt', 2, 'two')");
+        execStatement(conn, "insert into ora_00911_test(col_1, col_2) values (1, 1)");
+        execStatement(conn, "insert into ora_00911_test(col_1, col_2) values (2,\u00a02)"); // <<< Note the 'No-Break Space (NBSP)' character (=0x0a).
 
         trx.Commit();
         conn.Dispose();

@@ -1,3 +1,7 @@
+if (test-path throws-00911.exe) {
+   remove-item throws-00911.exe
+}
+
 csc -r:C:\Oracle\19\ODP.NET\managed\common\Oracle.ManagedDataAccess.dll throws-00911.cs
 
 echo '
