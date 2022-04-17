@@ -56,27 +56,55 @@ $Menu2_SubMenu2.Text = "Menu 2 - Sub menu 2"
 $Menu_2.DropDownItems.Add($Menu2_SubMenu2)
 
 $Menu_1 = $contextmenu.Items.Add("Menu 1");
-$Menu_1_Picture =[System.Drawing.Bitmap]::FromFile("exit.png")
+$Menu_1_Picture =[System.Drawing.Bitmap]::FromFile("$pwd\exit.png")
 $Menu_1.Image = $Menu_1_Picture
  
 $Menu_2 = $contextmenu.Items.Add("Menu 2");
-$Menu_2_Picture =[System.Drawing.Bitmap]::FromFile("exit.png")
+$Menu_2_Picture =[System.Drawing.Bitmap]::FromFile("$pwd\exit.png")
 $Menu_2.Image = $Menu_2_Picture
  
 $Menu_Restart = $contextmenu.Items.Add("Restart the tool");
-$Menu_Restart_Picture =[System.Drawing.Bitmap]::FromFile("exit.png")
+$Menu_Restart_Picture =[System.Drawing.Bitmap]::FromFile("$pwd\exit.png")
 $Menu_Restart.Image = $Menu_Restart_Picture
  
 $Menu_Exit = $contextmenu.Items.Add("Exit");
-$Menu_Exit_Picture =[System.Drawing.Bitmap]::FromFile("exit.png")
+$Menu_Exit_Picture =[System.Drawing.Bitmap]::FromFile("$pwd\exit.png")
 $Menu_Exit.Image = $Menu_Exit_Picture
 
 $SubMenu1_Part1 = New-Object System.Windows.Forms.ToolStripMenuItem
 $SubMenu1_Part1.Text = "Menu 1 - Sub menu 1"
-$SubMenu1_Part1_Picture =[System.Drawing.Bitmap]::FromFile("exit.png")
+$SubMenu1_Part1_Picture =[System.Drawing.Bitmap]::FromFile("$pwd\exit.png")
 $SubMenu1_Part1.Image = $SubMenu1_Part1_Picture
  
 $SubMenu1_Part2 = New-Object System.Windows.Forms.ToolStripMenuItem
 $SubMenu1_Part2.Text = "Menu 1 - Sub menu 2"
-$SubMenu1_Part2_Picture =[System.Drawing.Bitmap]::FromFile("exit.png")
+$SubMenu1_Part2_Picture =[System.Drawing.Bitmap]::FromFile("$pwd\exit.png")
 $SubMenu1_Part2.Image = $SubMenu1_Part2_Picture
+
+# Action after clicking on the systray icon 
+$Systray_Tool_Icon.Add_Click({
+    If ($_.Button -eq [Windows.Forms.MouseButtons]::Left) {
+        [System.Windows.Forms.MessageBox]::Show("You clicked on the systray tool")  
+    }
+})
+ 
+# Action after clicking on the Menu 1 - Submenu 1
+$Menu1_SubMenu1.add_Click({ 
+    [System.Windows.Forms.MessageBox]::Show("You clicked on the Menu1 - SubMenu1")
+})
+ 
+ 
+# Action after clicking on the Menu 1 - Submenu 2
+$Menu1_SubMenu2.add_Click({ 
+    [System.Windows.Forms.MessageBox]::Show("You clicked on the Menu1 - SubMenu2")
+})
+ 
+# Action after clicking on the Menu 2 - Submenu 1
+$Menu2_SubMenu1.add_Click({ 
+    [System.Windows.Forms.MessageBox]::Show("You clicked on the Menu2 - SubMenu1")
+})
+ 
+# Action after clicking on the Menu 2 - Submenu 2
+$Menu2_SubMenu2.add_Click({ 
+    [System.Windows.Forms.MessageBox]::Show("You clicked on the Menu2 - SubMenu2")
+})
