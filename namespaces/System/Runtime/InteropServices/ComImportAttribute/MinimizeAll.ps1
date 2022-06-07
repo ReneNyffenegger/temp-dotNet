@@ -1,6 +1,8 @@
 #
 #  https://mike-ward.net/2008/09/02/a-lean-method-for-invoking-com-in-c/
 #
+#  C:/Users/r.nyffenegger/github/github/notes/notes/Windows/development/COM/interfaces/IShellDispatch/PowerShell
+#
 
 add-type -TypeDefinition @'
 
