@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 
 namespace tq84 {
 
-    public class MinimizeAll {
+    public class shl {
         public static void go() {
             var shell = new Shell32();
             var shellDispatch = (IShellDispatch)shell;
@@ -19,7 +19,7 @@ namespace tq84 {
     }
 
     [ComImport, Guid("13709620-C279-11CE-A49E-444553540000")]
-    // Retrieving the COM class factory for component with CLSID {93709620-C279-11CE-A49E-444553540000} failed due to the following error: 80040154 Class not register
+  // Retrieving the COM class factory for component with CLSID {93709620-C279-11CE-A49E-444553540000} failed due to the following error: 80040154 Class not register
     class Shell32
     {
     }
@@ -31,10 +31,10 @@ namespace tq84 {
    [ComImport, Guid("D8F015C0-C278-11CE-A49E-444553540000")]
    [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
     public interface IShellDispatch {
-        [DispId(0x60020007)]
+//     [DispId(0x60020007)]
         void MinimizeAll();
     }
 }
 '@
 
-[tq84.MinimizeAll]::go()
+[tq84.shl]::go()
