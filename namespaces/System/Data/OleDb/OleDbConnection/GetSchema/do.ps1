@@ -1,3 +1,5 @@
+# 
+#  github\temp\dotNet\namespaces\System\Data\OleDb\OleDbConnection\GetSchema
 #
 #  ./do.ps1 "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=$pwd\..\..\data.xlsx; Extended Properties='Excel 12.0 Xml;HDR=YES;IMEX=1';"
 
