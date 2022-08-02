@@ -2,7 +2,10 @@ digraph hierarchy {
 
    node [ shape=box ]
 
-   System_Object[ label=< <table border="0"><tr><td align="text"><font face="Courier">Object</font></td></tr><tr><td align="text">root class<br align="left"/></td></tr></table> > ];
+   System_Object [ label=< <table border="0"> // {
+        <tr><td align="text"><font face="Courier"><b>Object</b></font></td></tr>
+        <tr><td><font face="Courier">System</font></td></tr>
+        <tr><td align="text"><i>The</i> root object</td></tr></table> > ];
 
    System_Xml_XmlNode [ label=< <table border="0"> // {
         <tr><td align="text"><font face="Courier"><b>XmlNode</b></font></td></tr>
@@ -39,14 +42,14 @@ digraph hierarchy {
    System_Xml_XmlNotation [ label=< <table border="0"> // {
         <tr><td align="text"><font face="Courier"><b>XmlNotation</b></font></td></tr>
         <tr><td><font face="Courier">System.Xml</font></td></tr>
-        <tr><td align="text">…</td></tr></table> > ];
+        <tr><td align="text">An XML notation (<font face="Courier">&lt;!NOTATION&gt;</font>)</td></tr></table> > ];
 
    System_Xml_XmlNode -> System_Xml_XmlAttribute
    System_Xml_XmlNode -> System_Xml_XmlDocument
    System_Xml_XmlNode -> System_Xml_XmlDocumentFragment
    System_Xml_XmlNode -> System_Xml_XmlEntity
-   System_Xml_XmlNode -> System_Xml_XmlLinkedNode         // here
-   System_Xml_XmlNode -> System_Xml_XmlNotation
+   System_Xml_XmlNode -> System_Xml_XmlLinkedNode
+   System_Xml_XmlNode -> System_Xml_XmlNotation         // here
 
 
    System_Configuration_ConfigXmlDocument [ label=< <table border="0"> // {
@@ -84,19 +87,19 @@ digraph hierarchy {
    System_Xml_XmlElement [ label=< <table border="0"> // {
          <tr><td align="text"><font face="Courier"><b>XmlElement</b></font></td></tr>
          <tr><td><font face="Courier">System.Xml</font></td></tr>
-         <tr><td align="text">…</td></tr></table> > ];
+         <tr><td align="text">An <b>XML element</b></td></tr></table> > ];
 
    System_Xml_XmlEntityReference [ label=< <table border="0"> // {
          <tr><td align="text"><font face="Courier"><b>XmlEntityReference</b></font></td></tr>
          <tr><td><font face="Courier">System.Xml</font></td></tr>
-         <tr><td align="text">…</td></tr></table> > ];
+         <tr><td align="text">An entity reference node</td></tr></table> > ];
 
    System_Xml_XmlProcessingInstruction [ label=< <table border="0"> // {
          <tr><td align="text"><font face="Courier"><b>XmlProcessingInstruction</b></font></td></tr>
          <tr><td><font face="Courier">System.Xml</font></td></tr>
-         <tr><td align="text">…</td></tr></table> > ];
+         <tr><td align="text">An XML processing instruction</td></tr></table> > ];
 
-   System_Xml_XmlLinkedNode -> System_Xml_XmlCharacterData
+   System_Xml_XmlLinkedNode -> System_Xml_XmlCharacterData // TODO
    System_Xml_XmlLinkedNode -> System_Xml_XmlDeclarataion
    System_Xml_XmlLinkedNode -> System_Xml_XmlDocumentType
    System_Xml_XmlLinkedNode -> System_Xml_XmlElement
