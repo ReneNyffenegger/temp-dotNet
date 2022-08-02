@@ -1,15 +1,66 @@
 digraph hierarchy {
 
-    node [ shape=box ]
+   node [ shape=box ]
 
-    System_Object[ label=< <table border="0"><tr><td align="text"><font face="Courier">Object</font></td></tr><tr><td align="text">root class<br align="left"/></td></tr></table> > ];
+   System_Object[ label=< <table border="0"><tr><td align="text"><font face="Courier">Object</font></td></tr><tr><td align="text">root class<br align="left"/></td></tr></table> > ];
 
-    System_Xml_XmlNode [ label=< <table border="0"> // {
-         <tr><td align="text"><font face="Courier"><b>XmlNode</b></font></td></tr>
+   System_Xml_XmlNode [ label=< <table border="0"> // {
+        <tr><td align="text"><font face="Courier"><b>XmlNode</b></font></td></tr>
+        <tr><td><font face="Courier">System.Xml</font></td></tr>
+        <tr><td align="text">…</td></tr></table> > ];
+
+   System_Object -> System_Xml_XmlNode
+
+   System_Xml_XmlAttribute [ label=< <table border="0"> // {
+        <tr><td align="text"><font face="Courier"><b>XmlAttribute</b></font></td></tr>
+        <tr><td><font face="Courier">System.Xml</font></td></tr>
+        <tr><td align="text">…</td></tr></table> > ];
+
+   System_Xml_XmlDocument [ label=< <table border="0"> // {
+        <tr><td align="text"><font face="Courier"><b>XmlDocument</b></font></td></tr>
+        <tr><td><font face="Courier">System.Xml</font></td></tr>
+        <tr><td align="text">An in-memory representation of an XML document</td></tr></table> > ];
+
+   System_Xml_XmlDocumentFragment [ label=< <table border="0"> // {
+        <tr><td align="text"><font face="Courier"><b>XmlDocumentFragment</b></font></td></tr>
+        <tr><td><font face="Courier">System.Xml</font></td></tr>
+        <tr><td align="text">…</td></tr></table> > ];
+
+   System_Xml_XmlEntity [ label=< <table border="0"> // {
+        <tr><td align="text"><font face="Courier"><b>XmlEntity</b></font></td></tr>
+        <tr><td><font face="Courier">System.Xml</font></td></tr>
+        <tr><td align="text">…</td></tr></table> > ];
+
+   System_Xml_XmlLinkedNode [ label=< <table border="0"> // {
+        <tr><td align="text"><font face="Courier"><b>XmlLinkedNode</b></font></td></tr>
+        <tr><td><font face="Courier">System.Xml</font></td></tr>
+        <tr><td align="text">…</td></tr></table> > ];
+
+   System_Xml_XmlNotation [ label=< <table border="0"> // {
+        <tr><td align="text"><font face="Courier"><b>XmlNotation</b></font></td></tr>
+        <tr><td><font face="Courier">System.Xml</font></td></tr>
+        <tr><td align="text">…</td></tr></table> > ];
+
+   System_Xml_XmlNode -> System_Xml_XmlAttribute
+   System_Xml_XmlNode -> System_Xml_XmlDocument         // here
+   System_Xml_XmlNode -> System_Xml_XmlDocumentFragment
+   System_Xml_XmlNode -> System_Xml_XmlEntity
+   System_Xml_XmlNode -> System_Xml_XmlLinkedNode
+   System_Xml_XmlNode -> System_Xml_XmlNotation
+
+
+   System_Configuration_ConfigXmlDocument [ label=< <table border="0"> // {
+         <tr><td align="text"><font face="Courier"><b>ConfigXmlDocument</b></font></td></tr>
+         <tr><td><font face="Courier">System.Configuration</font></td></tr>
+         <tr><td align="text">…</td></tr></table> > ];
+
+   System_Xml_XmlDataDocument [ label=< <table border="0"> // {
+         <tr><td align="text"><font face="Courier"><b>XmlDataDocument</b></font></td></tr>
          <tr><td><font face="Courier">System.Xml</font></td></tr>
          <tr><td align="text">…</td></tr></table> > ];
 
-    System_Object -> System_Xml_XmlNode
+   System_Xml_XmlDocument -> System_Configuration_ConfigXmlDocument
+   System_Xml_XmlDocument -> System_Xml_XmlDataDocument
 
 
 //
