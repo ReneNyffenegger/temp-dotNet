@@ -34,7 +34,7 @@ digraph hierarchy {
    System_Xml_XmlLinkedNode [ label=< <table border="0"> // {
         <tr><td align="text"><font face="Courier"><b>XmlLinkedNode</b></font></td></tr>
         <tr><td><font face="Courier">System.Xml</font></td></tr>
-        <tr><td align="text">…</td></tr></table> > ];
+        <tr><td align="text">A node's (immediate) sibling</td></tr></table> > ];
 
    System_Xml_XmlNotation [ label=< <table border="0"> // {
         <tr><td align="text"><font face="Courier"><b>XmlNotation</b></font></td></tr>
@@ -43,9 +43,9 @@ digraph hierarchy {
 
    System_Xml_XmlNode -> System_Xml_XmlAttribute
    System_Xml_XmlNode -> System_Xml_XmlDocument
-   System_Xml_XmlNode -> System_Xml_XmlDocumentFragment         // here
+   System_Xml_XmlNode -> System_Xml_XmlDocumentFragment
    System_Xml_XmlNode -> System_Xml_XmlEntity
-   System_Xml_XmlNode -> System_Xml_XmlLinkedNode
+   System_Xml_XmlNode -> System_Xml_XmlLinkedNode         // here
    System_Xml_XmlNode -> System_Xml_XmlNotation
 
 
@@ -62,6 +62,46 @@ digraph hierarchy {
    System_Xml_XmlDocument -> System_Configuration_ConfigXmlDocument
    System_Xml_XmlDocument -> System_Xml_XmlDataDocument
 
+
+
+   System_Xml_XmlCharacterData [ label=< <table border="0"> // {
+         <tr><td align="text"><font face="Courier"><b>XmlCharacterData</b></font></td></tr>
+         <tr><td><font face="Courier">System.Xml</font></td></tr>
+         <tr><td align="text">Text manipulation methods that are used by several classes.</td></tr></table> > ];
+
+   System_Xml_XmlDeclarataion [ label=< <table border="0"> // {
+         <tr><td align="text"><font face="Courier"><b>XmlDeclarataion</b></font></td></tr>
+         <tr><td><font face="Courier">System.Xml</font></td></tr>
+         <tr><td align="text">The XML declaration node (<font face="Courier">&lt;?xml version='1.0'…?&gt;</font>)</td></tr></table> > ];
+
+   System_Xml_XmlDocumentType [ label=< <table border="0"> // {
+         <tr><td align="text"><font face="Courier"><b>XmlDocumentType</b></font></td></tr>
+         <tr><td><font face="Courier">System.Xml</font></td></tr>
+         <tr><td align="left">Used to return information about a document type declaration</td></tr>
+         <tr><td align="left">See also <font face="Courier">XmlDocument.CrateDocumentType()</font></td></tr>
+         </table> > ];
+
+   System_Xml_XmlElement [ label=< <table border="0"> // {
+         <tr><td align="text"><font face="Courier"><b>XmlElement</b></font></td></tr>
+         <tr><td><font face="Courier">System.Xml</font></td></tr>
+         <tr><td align="text">…</td></tr></table> > ];
+
+   System_Xml_XmlEntityReference [ label=< <table border="0"> // {
+         <tr><td align="text"><font face="Courier"><b>XmlEntityReference</b></font></td></tr>
+         <tr><td><font face="Courier">System.Xml</font></td></tr>
+         <tr><td align="text">…</td></tr></table> > ];
+
+   System_Xml_XmlProcessingInstruction [ label=< <table border="0"> // {
+         <tr><td align="text"><font face="Courier"><b>XmlProcessingInstruction</b></font></td></tr>
+         <tr><td><font face="Courier">System.Xml</font></td></tr>
+         <tr><td align="text">…</td></tr></table> > ];
+
+   System_Xml_XmlLinkedNode -> System_Xml_XmlCharacterData
+   System_Xml_XmlLinkedNode -> System_Xml_XmlDeclarataion
+   System_Xml_XmlLinkedNode -> System_Xml_XmlDocumentType
+   System_Xml_XmlLinkedNode -> System_Xml_XmlElement
+   System_Xml_XmlLinkedNode -> System_Xml_XmlEntityReference
+   System_Xml_XmlLinkedNode -> System_Xml_XmlProcessingInstruction
 
 //
 //
