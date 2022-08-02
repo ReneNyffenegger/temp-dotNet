@@ -1,0 +1,650 @@
+digraph hierarchy {
+
+    node [ shape=box ]
+
+    System_Object[ label=< <table border="0"><tr><td align="text"><font face="Courier">Object</font></td></tr><tr><td align="text">root class<br align="left"/></td></tr></table> > ];
+
+    System_Xml_XmlNode [ label=< <table border="0"> // {
+         <tr><td align="text"><font face="Courier"><b>XmlNode</b></font></td></tr>
+         <tr><td><font face="Courier">System.Xml</font></td></tr>
+         <tr><td align="text">…</td></tr></table> > ];
+
+    System_Object -> System_Xml_XmlNode
+
+
+//
+//
+//    System_ValueType [ label=< <table border="0"><tr><td align="text"><font face="Courier">ValueType</font></td></tr><tr><td>…</td></tr></table> > ];
+//
+//    System_Object -> System_ValueType;
+//
+//    System_Nullable [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Nullable&lt;T&gt;</b></font></td></tr>
+//       <tr><td><font face="Courier">System</font></td></tr>
+//       <tr><td align="text">…</td></tr></table> > ];
+//
+//    System_Object -> System_Nullable // }
+//
+//    System_Delegate [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b><i>Delegate</i></b></font></td></tr>
+//       <tr><td><font face="Courier">System</font></td></tr>
+//       <tr><td align="text">…</td></tr></table> > ];
+//
+//    System_Object -> System_Delegate // }
+//
+//    System_Reflection_Memberinfo [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>MemberInfo</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">Reflection</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Object -> System_Reflection_Memberinfo; // }
+//
+//    System_Text_Encoding [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Encoding</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
+//       <tr><td align="text">$OutputEncoding<br align="left"/></td></tr></table> > ];
+//
+//    System_Object -> System_Text_Encoding // }
+//
+//    System_Environment [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Environment</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System</font></td></tr>
+//       <tr><td>Current environment/platform</td></tr></table> > ];
+//
+//    System_Object -> System_Environment; // }
+//
+//    System_Attribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Attribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//
+//    System_Object -> System_Attribute; // }
+//
+//    System_Reflection_AssemblyKeyFileAttribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>AssemblyKeyFileAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Reflection</font></td></tr>
+//       <tr><td align="text">Name of file with key pair</td></tr></table> > ];
+//
+//    System_Attribute -> System_Reflection_AssemblyKeyFileAttribute // }
+//
+//    System_Reflection_AssemblyKeyNameAttribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>AssemblyKeyNameAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Reflection</font></td></tr>
+//       <tr><td align="text">Name of key container within CSP</td></tr></table> > ];
+//
+//    System_Attribute -> System_Reflection_AssemblyKeyNameAttribute // }
+//
+//    System_STAThreadAttribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>STAThreadAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System</font></td></tr>
+//       <tr><td align="text">Application is single-threaded apartment<br align="left"/></td></tr></table> > ];
+//
+//
+//    System_Attribute -> System_STAThreadAttribute; // }
+//
+//    System_MTAThreadAttribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>MTAThreadAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System</font></td></tr>
+//       <tr><td align="text">Application is multi-threaded apartment<br align="left"/></td></tr></table> > ];
+//
+//    System_Attribute -> System_MTAThreadAttribute; // }
+//
+//    System_AttributeUsageAttribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>AttributeUsageAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System</font></td></tr>
+//       <tr><td>How other attributes are used</td></tr></table> > ];
+//
+//    System_Attribute -> System_AttributeUsageAttribute // }
+//
+//    System_MarshalByRefObject [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>MarshalByRefObject</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System</font></td></tr>
+//       <tr><td align="text">Access object accross<br align="left"/>application boundaries<br align="left"/></td></tr></table> > ];
+//
+//    System_Object -> System_MarshalByRefObject; // }
+//
+//    System_ComponentModel_MarshalByValueComponent [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>MarshalByValueComponent</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Object -> System_ComponentModel_MarshalByValueComponent // }
+//
+//    System_Data_Common_DataAdapter [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>DataAdapter</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
+//       <tr><td align="text">Bridge to <font face="Courier">System.Data.DataSet</font><br align="left"/></td></tr></table> > ];
+//
+//    System_MarshalByRefObject -> System_Data_Common_DataAdapter // }
+//
+//    System_Data_Common_DbDataAdapter [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Db.DataAdapter</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
+//       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+//
+//    System_Data_Common_DataAdapter -> System_Data_Common_DbDataAdapter // }
+//
+//    System_Data_DataRelation [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>DataRelation</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
+//       <tr><td>Parent-child relation between<br align="left"/>two <font face="Courier">DataTable</font> objects<br align="left"/></td></tr></table> > ];
+//
+//    System_Object -> System_Data_DataRelation // }
+//
+//    Microsoft_SqlServer_Server_SqlProcedureAttribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>SqlProcedureAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">Microsoft.SqlServer.Server</font></td></tr>
+//       <tr><td align="text">Used by Visual Studio<br align="left"/></td></tr></table> > ];
+//
+//    System_Attribute -> Microsoft_SqlServer_Server_SqlProcedureAttribute // }
+//
+//    System_DateTime [ label=< <table border="0"><tr><td align="text"><font face="Courier">DateTime</font></td></tr><tr><td>…</td></tr></table> > ];
+//
+//    System_Enum [ label = "Enum" ];
+//
+//    System_Int32 [ label = "Int32" ];
+//
+//    System_Void [ label = "Void" ];
+//
+//
+//    System_Exception [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Exception</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Object -> System_Exception // }
+//
+//
+//    System_Object -> System_Attribute; // }
+//
+//    System_Func [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b><i>Func&lt;…&gt;</i></b></font></td></tr>
+//       <tr><td><font face="Courier">System</font></td></tr>
+//       <tr><td align="text">…</td></tr></table> > ];
+//
+//    System_Delegate -> System_Func;
+//
+//    System_MulticastDelegate [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b><i>MulticastDelegate</i></b></font></td></tr>
+//       <tr><td><font face="Courier">System</font></td></tr>
+//       <tr><td align="text">…</td></tr></table> > ];
+//
+//    System_Delegate -> System_MulticastDelegate;
+//
+//    System_Action [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b><i>Action&lt;…&gt;</i></b></font></td></tr>
+//       <tr><td><font face="Courier">System</font></td></tr>
+//       <tr><td align="text">…</td></tr></table> > ];
+//
+//    System_Delegate -> System_Action;
+//
+//    System_EventHandler [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>EventHandler</b></font></td></tr>
+//       <tr><td><font face="Courier">System</font></td></tr>
+//       <tr><td align="text">Method that handles<br align="left"/>events without data<br align="left"/></td></tr></table> > ];
+//
+//    System_Delegate -> System_EventHandler // }
+//
+//    System_Collections_IEnumerable [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>IEnumerable</b></font></td></tr>
+//       <tr><td><font face="Courier">System.Collections</font></td></tr>
+//       <tr><td align="text">Used for the <font face="Courier">foreach</font> keyword<br align="left"/></td></tr></table> > ];
+//    // }
+//
+//    System_Collections_IEnumerator [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>IEnumerator</b></font></td></tr>
+//       <tr><td><font face="Courier">System.Collections</font></td></tr>
+//       <tr><td align="text">Returned by <font face="Courier">IEnumerable.GetEnumerator()</font><br align="left"/></td></tr></table> > ];
+//
+//    System_Collections_Generic_IEnumerable [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>IEnumerable&lt;T&gt;</b></font></td></tr>
+//       <tr><td><font face="Courier">System.Collections.Generic</font></td></tr>
+//       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+//
+//    System_Collections_IEnumerable -> System_Collections_Generic_IEnumerable // }
+//
+//    System_Collections_Specialized_NameObjectCollectionBase [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b><i>NameObjectCollectionBase</i></b></font></td></tr>
+//       <tr><td><font face="Courier">System.Collections.Specialized</font></td></tr>
+//       <tr><td align="text">Abstract base class for string-key<br align="left"/>object-value pairs<br align="left"/></td></tr></table> > ];
+//
+//    System_Object -> System_Collections_Specialized_NameObjectCollectionBase // }
+//
+//    System_Collections_Specialized_NameObjectCollection [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>NameObjectCollection</b></font></td></tr>
+//       <tr><td><font face="Courier">System.Collections.Specialized</font></td></tr>
+//       <tr><td align="text">…<br align="left"/></td></tr> </table> > ]
+//
+//    System_Collections_Specialized_NameObjectCollectionBase -> System_Collections_Specialized_NameObjectCollection // }
+//
+//    System_Net_WebHeaderCollection [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>WebHeaderCollection</b></font></td></tr>
+//       <tr><td><font face="Courier">System.Net</font></td></tr>
+//       <tr><td align="text">…<br align="left"/></td></tr> </table> > ]
+//
+//   System_Collections_Specialized_NameObjectCollection -> System_Net_WebHeaderCollection // }
+//
+//    System_Reflection_TypeInfo [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>TypeInfo</b></font></td></tr>
+//       <tr><td><font face="Courier">System.Reflection</font></td></tr>
+//       <tr><td align="text">Abstract class<br align="left"/></td></tr></table> > ];
+//
+//    System_Type -> System_Reflection_TypeInfo; // }
+//
+//    System_Reflection_TypeDelegator [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>TypeDelegator</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Reflection</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Reflection_Emit_TypeBuilder [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>TypeBuilder</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Reflection.Emit</font></td></tr>
+//       <tr><td align="text">Define and create new<br align="left"/>classes/instances at runtime<br align="left"/></td></tr>
+//    </table> > ];
+//
+//    System_Reflection_Emit_GenericTypeParameterBuilderClass [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>GenericParameterBuilderClass</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Reflection.Emit</font></td></tr>
+//       <tr><td align="text">…<br align="left"/>…<br align="left"/></td></tr>
+//    </table> > ];
+//
+//    System_Reflection_Emit_EnumBuilder [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>EnumBuilder</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Reflection.Emit</font></td></tr>
+//       <tr><td align="text">…<br align="left"/>…<br align="left"/></td></tr>
+//    </table> > ];
+//
+//    System_Type [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>Type</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//
+//    System_Text_EncodingNLS [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>EncodingNLS</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Text_Encoding -> System_Text_EncodingNLS
+//
+//    System_Text_BaseCodePageEncoding [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>BaseCodePageEncoding</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Text_EncodingNLS -> System_Text_BaseCodePageEncoding
+//
+//    System_Text_SBSCCodePageEncoding [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>SBSCCodePageEncoding</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Text</font></td></tr>
+//       <tr><td align="text">[System.Console]::Encoding</td></tr></table> > ];
+//
+//    System_Text_BaseCodePageEncoding -> System_Text_SBSCCodePageEncoding
+//
+//    System_Type -> System_Reflection_TypeDelegator;
+//    System_Type -> System_Reflection_Emit_TypeBuilder;
+//    System_Type -> System_Reflection_Emit_GenericTypeParameterBuilderClass;
+//    System_Type -> System_Reflection_Emit_EnumBuilder;
+//
+//
+//
+//
+//    System_DefaultPropertyAttribute [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>DefaultPropertyAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//
+//
+//
+//
+//    System_Data_DataTable [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>DataTable</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
+//       <tr><td>In-memory cache of data<br align="left"/></td></tr></table> > ];
+//
+//    System_ComponentModel_MarshalByValueComponent-> System_Data_DataTable;
+//
+//
+//    System_Web_UI_WebControls_WebControl [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>WebControl</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Web.UI.WebControls</font></td></tr>
+//       <tr><td>…<br align="left"/>…</td></tr></table> > ];
+//
+//    System_Web_UI_Control -> System_Web_UI_WebControls_WebControl
+//
+//    System_Windows_Forms_Control [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Control</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Windows.Forms</font></td></tr>
+//       <tr><td>Controls such as buttons etc.<br align="left"/></td></tr></table> > ];
+//
+//    System_ComponentModel_Component -> System_Windows_Forms_Control // }
+//
+//    System_Windows_Forms_ScrollableControl [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>ScrollableControl</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Windows.Forms</font></td></tr>
+//       <tr><td align="text">Auto-scrolling controls<br align="left"/></td></tr></table> > ];
+//
+//    System_Windows_Forms_Control -> System_Windows_Forms_ScrollableControl // }
+//
+//    System_Windows_Forms_ContainerControl [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>ContainerControl</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Windows.Forms</font></td></tr>
+//       <tr><td align="text">Container for controls<br align="left"/>Provides focus management<br align="left"/></td></tr></table> > ];
+//
+//    System_Windows_Forms_ScrollableControl -> System_Windows_Forms_ContainerControl // }
+//
+//    System_Windows_Forms_Form [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Form</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Windows.Forms</font></td></tr>
+//       <tr><td align="text">Window or Dialog for<br align="left"/>application's GUI<br align="left"/></td></tr></table> > ];
+//
+//    System_Windows_Forms_ContainerControl -> System_Windows_Forms_Form // }
+//
+//    System_Data_DataSet [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>DataSet</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
+//       <tr><td>In-memory data table</td></tr></table> > ];
+//
+//    System_ComponentModel_MarshalByValueComponent-> System_Data_DataSet;
+//
+//    System_Management_Automation_PSObject [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>PSObject</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Object -> System_Management_Automation_PSObject; // }
+//
+//    System_Management_Automation_InformationalRecord [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>InformationalRecord</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td align="text">Base class for items<br align="left"/>in <font face="Courier">PSInformationalBuffers<br align="left"/></font></td></tr></table> > ];
+//
+//    System_Object -> System_Management_Automation_InformationalRecord; // }
+//
+//    System_Management_Automation_PSVariable [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>PSVariable</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+//
+//    System_Object -> System_Management_Automation_PSVariable
+//
+//    System_Management_Automation_CommandInfo [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>CommandInfo</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Object -> System_Management_Automation_CommandInfo // }
+//
+//    System_Management_Automation_FunctionInfo [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>FunctionInfo</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Management_Automation_CommandInfo -> System_Management_Automation_FunctionInfo // }
+//
+//    System_Management_Automation_CmdletInfo [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>CmdletInfo</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Management_Automation_CommandInfo -> System_Management_Automation_CmdletInfo // }
+//
+//    System_Web_UI_Control [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>Control</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Web.UI</font></td></tr>
+//       <tr><td>…<br align="left"/>ASP.NET server controls</td></tr></table> > ];
+//
+//    System_Object -> System_Web_UI_Control
+//
+//    System_Management_Automation_AliasInfo [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>AliasInfo</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Management_Automation_CommandInfo -> System_Management_Automation_AliasInfo
+//
+//    System_Management_Automation_PSCustomObject [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>PSCustomObject</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Management_Automation_Internal_CmdletMetadataAttribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>CmdletMetadataAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation.Internal</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Attribute -> System_Management_Automation_Internal_CmdletMetadataAttribute // }
+//
+//    System_Management_Automation_CmdletCommonMetadataAttribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>CmdletCommonMetadataAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Management_Automation_Internal_CmdletMetadataAttribute -> System_Management_Automation_CmdletCommonMetadataAttribute // }
+//
+//    System_Management_Automation_CmdletBindingAttribute [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>CmdletBindingAttribute</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td align="text">cmdlet parameter binding<br align="left"/>rather than script parameter binding<br align="left"/></td></tr></table> > ];
+//
+//    System_Management_Automation_CmdletCommonMetadataAttribute -> System_Management_Automation_CmdletBindingAttribute // }
+//
+//    System_ComponentModel_Component [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Component</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.ComponentModel</font></td></tr>
+//       <tr><td align="text">Base implementation for <font face="monospace">IComponent</font><br align="left"/>Enables object sharing between applications<br align="left"/></td></tr></table> > ];
+//
+//    System_MarshalByRefObject -> System_ComponentModel_Component // }
+//
+//    System_Diagnosticts_Process [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Process</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Diagnostics</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_ComponentModel_Component -> System_Diagnosticts_Process // }
+//
+//    System_Data_Common_DbConnection [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>DbConnection</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
+//       <tr><td>Base class for DB connections</td></tr></table> > ];
+//
+//    System_Data_Common_DbCommand [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>DbCommand</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
+//       <tr><td>SQL statement or stored procedure</td></tr></table> > ];
+//
+//    System_IO_Stream [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Stream</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    System_MarshalByRefObject -> System_IO_Stream // }
+//
+//    System_IO_FileStream [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>FileStream</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    System_IO_Stream -> System_IO_FileStream // }
+//
+//    System_IO_TextReader [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b><i>TextReader</i></b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    System_MarshalByRefObject -> System_IO_TextReader // }
+//
+//    System_IO_StreamReader [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>StreamReader</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    System_IO_TextReader -> System_IO_StreamReader // }
+//
+//    System_IO_FileSystemInfo [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>FileSystemInfo</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    System_MarshalByRefObject -> System_IO_FileSystemInfo
+//
+//    System_IO_DirectoryInfo [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>DirectoryInfo</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    System_IO_FileSystemInfo -> System_IO_DirectoryInfo
+//
+//    System_IO_FileInfo [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>FileInfo</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.IO</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    System_IO_FileSystemInfo -> System_IO_FileInfo
+//
+//    System_Data_Common_DbDataReader [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>DbDataReader</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Data.Common</font></td></tr>
+//       <tr><td align="text">Read forward-only rows<br align="left"/>from data source<br align="left"/></td></tr></table> > ];
+//
+//    System_MarshalByRefObject -> System_Data_Common_DbDataReader
+//
+//    System_Data_DataTableReader [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>DataTableReader</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Data</font></td></tr>
+//       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+//
+//    System_Data_Common_DbDataReader -> System_Data_DataTableReader
+//
+//    System_Net_WebRequest [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b><i>WebRequest</i></b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Net</font></td></tr>
+//       <tr><td align="text">URI requests</td></tr></table> > ];
+//
+//    System_MarshalByRefObject -> System_Net_WebRequest
+//
+//    System_Net_WebResponse [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b><i>WebResponse</i></b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Net</font></td></tr>
+//       <tr><td align="text">…</td></tr></table> > ];
+//
+//    System_MarshalByRefObject -> System_Net_WebResponse
+//
+//    System_Net_HttpWebResponse [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>HttpWebResponse</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Net</font></td></tr>
+//       <tr><td align="text">…</td></tr></table> > ];
+//
+//    System_Net_WebResponse -> System_Net_HttpWebResponse
+//
+//    System_Net_HttpWebRequest [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>HttpWebRequest</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Net</font></td></tr>
+//       <tr><td align="text">HTTP requests</td></tr></table> > ];
+//
+//    System_Net_WebRequest -> System_Net_HttpWebRequest
+//
+//    Oracle_DataAccess_Client_OracleConnection [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>OracleConnection</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">Oracle.DataAccess.Client</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    Oracle_ManagedDataAccess_Client_OracleConnection [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>OracleConnection</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">Oracle.ManagedDataAccess.Client</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    Oracle_ManagedDataAccess_Client_OracleCommand [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>OracleCommand</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">Oracle.ManagedDataAccess.Client</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    Oracle_ManagedDataAccess_Client_OracleDataReader [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>OracleDataReader</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">Oracle.ManagedDataAccess.Client</font></td></tr>
+//       <tr><td></td></tr></table> > ];
+//
+//    System_Data_Common_DbDataReader -> Oracle_ManagedDataAccess_Client_OracleDataReader
+//
+//    System_Management_Automation_Cmdlet [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>Cmdlet</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td align="text">Base class for all PowerShell cmdLets<br align="left"/></td></tr></table> > ];
+//
+//    System_Management_Automation_PSCmdlet [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>PSCmdlet</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation</font></td></tr>
+//       <tr><td align="text">…<br align="left"/></td></tr></table> > ];
+//
+//
+//    System_Management_Automation_Internal_InternalCommand [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>InternalCommand</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Management.Automation.Internal</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//     System_AppDomain [ label=< <table border="0">
+//                             <tr><td align="text"><font face="Courier">AppDomain</font></td></tr>
+//                             <tr><td>Application Domain</td></tr></table> > ];
+//
+//    Microsoft_PowerShell_Commands_ByteCollection [ label=< <table border="0">
+//       <tr><td align="text"><font face="Courier"><b>ByteCollection</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">Microsoft.PowerShell.Commands</font></td></tr>
+//       <tr><td>…</td></tr></table> > ];
+//
+//    System_Object -> Microsoft_PowerShell_Commands_ByteCollection
+//
+//
+//    System_CLSCompliantAttribute [ label = "CLSCompliantAttribute" ];
+//
+//    System_ValueType -> System_Enum;
+//    System_ValueType -> System_DateTime;
+//
+//    System_ValueType -> System_Int32;
+//
+//    System_ValueType -> System_Void;
+//
+//
+//
+//    System_Attribute -> System_CLSCompliantAttribute;
+//    System_Attribute -> System_DefaultPropertyAttribute;
+//
+//    System_Reflection_Memberinfo -> System_Type;
+//
+//    System_RuntimeType [ label=< <table border="0"><tr><td align="text"><font face="Courier">RuntimeType</font></td></tr><tr><td>Not documented?</td></tr></table> > ];
+//    System_Reflection_TypeInfo -> System_RuntimeType;
+//
+//
+//    System_Runtime_ConstrainedExecution_CriticalFinalizerObject [ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>CriticalFinalizerObject</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Runtime.ConstrainedExecution</font></td></tr>
+//       <tr><td align="text">Mark finalization code in derived<br align="left"/>as critical.<br align="left"/></td></tr></table> > ];
+//
+//    System_Object -> System_Runtime_ConstrainedExecution_CriticalFinalizerObject // }
+//
+//    System_Threading_Thread[ label=< <table border="0"> // {
+//       <tr><td align="text"><font face="Courier"><b>Thread</b></font></td></tr>
+//       <tr><td align="text"><font face="Courier">System.Threading</font></td></tr>
+//       <tr><td align="text">Create and control a thread<br align="left"/></td></tr></table> > ];
+//
+//    System_Runtime_ConstrainedExecution_CriticalFinalizerObject -> System_Threading_Thread // }
+//
+//
+//    System_Object -> System_Management_Automation_PSCustomObject;
+//
+//
+//   System_MarshalByRefObject -> System_AppDomain;
+//
+//   System_Object -> System_Management_Automation_Internal_InternalCommand
+//   System_Management_Automation_Internal_InternalCommand -> System_Management_Automation_Cmdlet
+//   System_Management_Automation_Cmdlet -> System_Management_Automation_PSCmdlet
+//
+//   System_ComponentModel_Component -> System_Data_Common_DbConnection
+//   System_Data_Common_DbConnection -> Oracle_DataAccess_Client_OracleConnection
+//   System_Data_Common_DbConnection -> Oracle_ManagedDataAccess_Client_OracleConnection
+//
+//   System_ComponentModel_Component -> System_Data_Common_DbCommand
+//   System_Data_Common_DbCommand -> Oracle_ManagedDataAccess_Client_OracleCommand
+
+}
