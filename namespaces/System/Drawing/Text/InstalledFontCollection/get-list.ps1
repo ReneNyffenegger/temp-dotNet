@@ -3,7 +3,8 @@
 #
 
 $null = [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")
-$fontColl = new-object System.Drawing.Text.InstalledFontCollection
+  $fontColl = new-object System.Drawing.Text.InstalledFontCollection
+# $fontColl = new-object System.Drawing.Text.PrivateFontCollection
 
 # $fontColl.GetType().FullName
 
