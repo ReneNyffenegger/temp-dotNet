@@ -12,5 +12,6 @@ $null = [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")
 # $fontColl.Families.GetType().FullName
 
 foreach ($fontFamily in $fontColl.Families) {
-   $fontFamily
+#  $fontFamily.GetType().FullName
+   $fontFamily.Name
 }
