@@ -7,7 +7,9 @@ $fontColl = new-object System.Drawing.Text.InstalledFontCollection
 
 # $fontColl.GetType().FullName
 
-$fontColl | select *
-$fontColl.Families.GetType().FullName
+# $fontColl | select *
+# $fontColl.Families.GetType().FullName
 
-# $fontColl.Families
+foreach ($fontFamily in $fontColl.Families) {
+   $fontFamily
+}
