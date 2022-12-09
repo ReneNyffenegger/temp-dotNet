@@ -1,4 +1,5 @@
 #
+#
 # https://superuser.com/a/760632
 #
 
@@ -13,5 +14,6 @@ $null = [System.Reflection.Assembly]::LoadWithPartialName("System.Drawing")
 
 foreach ($fontFamily in $fontColl.Families) {
 #  $fontFamily.GetType().FullName
-   $fontFamily.Name
+#  $fontFamily.Name
+  '{0:-30} {1}' -f $fontFamily.Name, $fontFamily.IsStyleAvailable()
 }
