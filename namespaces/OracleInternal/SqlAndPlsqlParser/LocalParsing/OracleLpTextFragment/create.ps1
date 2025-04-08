@@ -3,10 +3,12 @@
 #
 # Version 1 IGS:
 # try { add-type -literalPath C:\Oracle\Client\odp.net\managed\common\Oracle.ManagedDataAccess.dll } catch { out-errorRecord $_ }
+  try { add-type -literalPath C:\Oracle\Client\odp.net\managed\common\Oracle.ManagedDataAccess.dll } catch { $_.exception.loaderExceptions }
+  # -> Could not load file or assembly 'System.Text.Json, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. The system cannot find the file specified.
 
 # Version 2 IGS:
-using assembly "C:\Oracle\Client\odp.net\managed\common\Oracle.ManagedDataAccess.dll"
-using namespace Oracle.ManagedDataAccess.Client
+# using assembly "C:\Oracle\Client\odp.net\managed\common\Oracle.ManagedDataAccess.dll"
+# using namespace Oracle.ManagedDataAccess.Client
 
 $x = 'select * from dual'
 
