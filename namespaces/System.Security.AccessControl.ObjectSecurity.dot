@@ -1,0 +1,124 @@
+digraph hierarchy {
+
+    node [ shape=box ]
+
+    ObjectSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>ObjectSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    CommonObjectSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>CommonObjectSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    NativeObjectSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>NativeObjectSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    FileSystemSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>FileSystemSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    DirectorySecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DirectorySecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    FileSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>FileSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    PipeSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>PipeSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO.Pipes</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    CryptoKeySecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>CryptoKeySecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ]
+
+    EventWaitHandleSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>EventWaitHandleSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ]
+
+    MutexSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>MutexSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ]
+
+    ObjectSecurity_T [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>ObjectSecurity&lt;T&gt;</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    RegistrySecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>RegistrySecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    SemaphoreSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>SemaphoreSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    DirectoryObjectSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>DirectoryObjectSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    ActiveDirectorySecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>ActiveDirectorySecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.DirectoryServices</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    MemoryMappedFileSecurity [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>MemoryMappedFileSecurity</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO.MemoryMappedFiles</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+
+    ObjectSecurity -> CommonObjectSecurity
+    ObjectSecurity -> DirectoryObjectSecurity
+    CommonObjectSecurity -> NativeObjectSecurity
+
+    DirectoryObjectSecurity -> ActiveDirectorySecurity
+
+    NativeObjectSecurity -> PipeSecurity
+    NativeObjectSecurity -> CryptoKeySecurity
+    NativeObjectSecurity -> EventWaitHandleSecurity
+    NativeObjectSecurity -> FileSystemSecurity
+    NativeObjectSecurity -> MutexSecurity
+    NativeObjectSecurity -> ObjectSecurity_T
+    NativeObjectSecurity -> RegistrySecurity
+    NativeObjectSecurity -> SemaphoreSecurity
+
+    FileSystemSecurity -> DirectorySecurity
+    FileSystemSecurity -> FileSecurity
+
+    ObjectSecurity_T -> MemoryMappedFileSecurity
+
+
+
+}
