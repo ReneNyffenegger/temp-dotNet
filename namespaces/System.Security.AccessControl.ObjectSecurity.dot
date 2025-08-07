@@ -29,13 +29,13 @@ digraph hierarchy {
     DirectorySecurity [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>DirectorySecurity</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
-       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+       <tr><td align="text">Returned by <font face="Courier">get-acl $dir</font><br align="left"/></td></tr></table> >
     ];
 
     FileSecurity [ label=< <table border="0">
        <tr><td align="text"><font face="Courier"><b>FileSecurity</b></font></td></tr>
        <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
-       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+       <tr><td align="text">Returned by <font face="Courier">get-acl $file</font><br align="left"/></td></tr></table> >
     ];
 
     PipeSecurity [ label=< <table border="0">
