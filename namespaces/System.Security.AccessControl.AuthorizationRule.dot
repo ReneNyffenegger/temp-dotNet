@@ -1,0 +1,161 @@
+digraph hierarchy {
+
+    node [ shape=box ]
+
+    AuthorizationRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>AuthorizationRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    AccessRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>AccessRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+
+    AuditRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>AuditRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    AccessRule_T [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>AccessRule&lt;T&gt;</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    CryptoKeyAccessRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>CryptoKeyAccessRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    EventWaitHandleAccessRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>EventWaitHandleAccessRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    FileSystemAccessRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>FileSystemAccessRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    MutexAccessRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>MutexAccessRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    ObjectAccessRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>ObjectAccessRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    RegistryAccessRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>RegistryAccessRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    SemaphoreAccessRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>SemaphoreAccessRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    PipeAccessRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>PipeAccessRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO.Pipes</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    AuditRule_T [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>AuditRule&lt;T&gt;</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    CryptoKeyAuditRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>CryptoKeyAuditRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    EventWaitHandleAuditRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>EventWaitHandleAuditRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    FileSystemAuditRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>FileSystemAuditRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    MutexAuditRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>MutexAuditRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    ObjectAuditRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>ObjectAuditRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    RegistryAuditRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>RegistryAuditRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    SemaphoreAuditRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>SemaphoreAuditRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.Security.AccessControl</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+    PipeAuditRule [ label=< <table border="0">
+       <tr><td align="text"><font face="Courier"><b>PipeAuditRule</b></font></td></tr>
+       <tr><td align="text"><font face="Courier">System.IO.Pipes</font></td></tr>
+       <tr><td align="text">text text text<br align="left"/>text text text<br align="left"/></td></tr></table> >
+    ];
+
+
+    AuthorizationRule -> AccessRule
+    AuthorizationRule -> AuditRule
+
+
+
+    AccessRule -> PipeAccessRule
+
+    AccessRule -> AccessRule_T
+    AccessRule -> CryptoKeyAccessRule
+    AccessRule -> EventWaitHandleAccessRule
+    AccessRule -> FileSystemAccessRule
+    AccessRule -> MutexAccessRule
+    AccessRule -> ObjectAccessRule
+    AccessRule -> RegistryAccessRule
+    AccessRule -> SemaphoreAccessRule
+
+    AuditRule -> PipeAuditRule
+
+    AuditRule -> AuditRule_T
+    AuditRule -> CryptoKeyAuditRule
+    AuditRule -> EventWaitHandleAuditRule
+    AuditRule -> FileSystemAuditRule
+    AuditRule -> MutexAuditRule
+    AuditRule -> ObjectAuditRule
+    AuditRule -> RegistryAuditRule
+    AuditRule -> SemaphoreAuditRule
+
+
+}
